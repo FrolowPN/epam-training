@@ -1,0 +1,5 @@
+D:\VS\SchefPovar\SchefPovar\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\VS\SchefPovar\SchefPovar\bin\Debug\SchefPovar.exe
+D:\VS\SchefPovar\SchefPovar\bin\Debug\SchefPovar.pdb
+D:\VS\SchefPovar\SchefPovar\obj\x86\Debug\SchefPovar.exe
+D:\VS\SchefPovar\SchefPovar\obj\x86\Debug\SchefPovar.pdb
