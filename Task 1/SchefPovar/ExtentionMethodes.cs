@@ -11,7 +11,7 @@ namespace SchefPovar
         {
             foreach (var item in list)
             {
-                Console.WriteLine("Name - {0} \tКалорийность - {1} ккал.", item.Name, item.CaloricContent);  
+                Console.WriteLine(item.AllProperties);
             }
             
         }

@@ -8,10 +8,10 @@ namespace SchefPovar
 {
     public interface IComponent
     {
-        string Name { get; set; }
-        int CaloricContent { get; set; }
+        string Name { get; }
+        int CaloricContent { get; }
 
-        
+        string AllProperties{get;}
 
     }
 }

@@ -10,13 +10,13 @@ namespace SchefPovar
         static void Main(string[] args)
         {
             var salad = new Salad("Все, что было", new List<IComponent>() { 
-                                                        new Cucumber() { Name = "Салатный огурец", Weight = 100, CaloricContent = 120 },
-                                                        new Onion() { Name = "Репчатый лук", Weight = 20, CaloricContent = 20 },
-                                                        new Pepper() { Name = "Перец", Weight = 40, CaloricContent = 70, Color = "Красный" },
-                                                        new Potato() { Name = "Отварной картофель", Weight = 200, CaloricContent = 400 },
-                                                        new Tomato() { Name = "Черри", Weight = 80, CaloricContent = 30 },
-                                                        new Potato() { Name = "Сырой картофель", Weight = 200, CaloricContent = 560 },
-                                                        new Oil() { Name = "Оливковое масло",Volume = 40 , CaloricContent = 60 }
+                                                        new Cucumber("Салатный огурец", 100, 120 ),
+                                                        new Onion("Репчатый лук", 20, 20) ,
+                                                        new Pepper("Перец", 40, 70,"Красный"),
+                                                        new Potato("Отварной картофель",200,400),
+                                                        new Tomato("Черри", 80, 30),
+                                                        new Potato("Сырой картофель", 200, 560),
+                                                        new Oil("Оливковое масло",40 , 60)
                                                         });
 
             Console.WriteLine("Состав салата -= {0} =-:", salad.Name);

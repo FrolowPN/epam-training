@@ -8,5 +8,9 @@ namespace SchefPovar
 {
     public class Cucumber : Vegetable, IComponent
     {
+        public Cucumber(string name, int weight, int caloricContent):base(name, weight, caloricContent)
+        {
+
+        }
     }
 }
