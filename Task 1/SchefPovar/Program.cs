@@ -20,10 +20,7 @@ namespace SchefPovar
                                                         });
 
             Console.WriteLine("Состав салата -= {0} =-:", salad.Name);
-            foreach (var item in salad.Composition)
-            {
-                ExtentionMethodes.PrintToConsole(item);
-            }
+            ExtentionMethodes.PrintToConsole(salad.Composition);
             EmptyLineAndReadKey();
             ExtentionMethodes.CaloricContentToConsole(salad);
             EmptyLineAndReadKey();
@@ -39,11 +36,11 @@ namespace SchefPovar
             //salad.SortByName();
             //EmptyLineAndReadKey();
 
-            //int c = 50;
-            //int b = 100;
-            //Console.WriteLine("Состав салата отобранный по калорийности компонентов от {0} до {1} ккал.:", c, b);
-            //salad.PrintComponentsWithParametrs(c, b);
-            //Console.ReadKey();
+            int c = 20;
+            int b = 100;
+            Console.WriteLine("Состав салата отобранный по калорийности компонентов от {0} до {1} ккал.:", c, b);
+            ExtentionMethodes.PrintToConsole(salad.ComponentsWithParametrs(c, b));
+            Console.ReadKey();
 
 
         }

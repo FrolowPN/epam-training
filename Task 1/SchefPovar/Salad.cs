@@ -46,12 +46,10 @@ namespace SchefPovar
           
         }
 
-        public void PrintComponentsWithParametrs(int begin, int end)
+        public List<IComponent> ComponentsWithParametrs(int begin, int end)
         {
-            //foreach (var item in Composition.Where(x => x.CaloricContent >= begin && x.CaloricContent <= end))
-            //{
-            //    item.Print();
-            //}
+             List<IComponent> list = this.Composition.Where(x => x.CaloricContent >= begin && x.CaloricContent <= end).ToList();
+             return list;
         }
 
     }

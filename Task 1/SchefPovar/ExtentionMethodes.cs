@@ -7,9 +7,13 @@ namespace SchefPovar
 {
     public static class ExtentionMethodes
     {
-        public static void PrintToConsole (this IComponent item)
+        public static void PrintToConsole (this List<IComponent> list)
         {
-            Console.WriteLine("Name - {0} \tКалорийность - {1} ккал.", item.Name, item.CaloricContent);
+            foreach (var item in list)
+            {
+                Console.WriteLine("Name - {0} \tКалорийность - {1} ккал.", item.Name, item.CaloricContent);  
+            }
+            
         }
         public static void CaloricContentToConsole(this Salad salad)
         {
