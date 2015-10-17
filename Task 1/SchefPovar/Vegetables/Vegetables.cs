@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SchefPovar
 {
-    public class Vegetables: IComponent
+    public class Vegetable: IComponent
     {
         public string Name { get; set; }
         public double Weight { get; set; }

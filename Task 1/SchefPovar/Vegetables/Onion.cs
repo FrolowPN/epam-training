@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SchefPovar
 {
-    public class Onion : Vegetables, IComponent
+    public class Onion : Vegetable, IComponent
     {
     }
 }
