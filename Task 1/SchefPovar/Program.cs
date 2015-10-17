@@ -24,8 +24,8 @@ namespace SchefPovar
             {
                 ExtentionMethodes.PrintToConsole(item);
             }
-            //Console.WriteLine("Состав салата -= {0} =-:", salad.Name);
-            //salad.PrintComponent();
+            EmptyLineAndReadKey();
+            ExtentionMethodes.CaloricContentToConsole(salad);
             EmptyLineAndReadKey();
 
             //salad.CountCaloricContent();

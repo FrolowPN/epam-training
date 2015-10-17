@@ -35,14 +35,15 @@ namespace SchefPovar
             //}
         }
 
-        public void CountCaloricContent()
+        public int CountCaloricContent()
         {
-            //int i = 0;
-            //foreach (var item in Composition)
-            //{
-            //    i += item.CaloricContent;
-            //}
-            //Console.WriteLine("Калорийность салата -= {0} =- составляет {1} ккал.", Name, i);
+            int amountOfCalories = 0;
+            foreach (var item in Composition)
+            {
+             amountOfCalories += item.CaloricContent;
+            }
+            return amountOfCalories;
+          
         }
 
         public void PrintComponentsWithParametrs(int begin, int end)

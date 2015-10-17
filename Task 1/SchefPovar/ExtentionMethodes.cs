@@ -11,5 +11,9 @@ namespace SchefPovar
         {
             Console.WriteLine("Name - {0} \tКалорийность - {1} ккал.", item.Name, item.CaloricContent);
         }
+        public static void CaloricContentToConsole(this Salad salad)
+        {
+            Console.WriteLine("Калорийность салата -= {0} =- составляет - {1} ккал.",salad.Name, salad.CountCaloricContent());
+        }
     }
 }
