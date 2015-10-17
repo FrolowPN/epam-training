@@ -16,22 +16,40 @@ namespace SchefPovar
                                                         new Potato("Отварной картофель",200,400),
                                                         new Tomato("Черри", 80, 30),
                                                         new Potato("Сырой картофель", 200, 560),
-                                                        new Oil("Оливковое масло",40 , 60)
+                                                        new Oil("Оливковое масло",40 , 60 )
                                                         });
 
             Console.WriteLine("Состав салата -= {0} =-:", salad.Name);
-            ExtentionMethodes.PrintToConsole(salad.Composition);
+            ExtentionMethodes.PrintToConsole(salad.GetAllComponents());
             EmptyLineAndReadKey();
 
             ExtentionMethodes.CaloricContentToConsole(salad);
             EmptyLineAndReadKey();
 
-            salad.SortByName();
-            ExtentionMethodes.PrintToConsole(salad.Composition);
+            Console.WriteLine("Состав салата -= {0} =-:", salad.Name);
+            salad.DeleteComponent("Перец");
+            ExtentionMethodes.PrintToConsole(salad.GetAllComponents());
             EmptyLineAndReadKey();
 
+            ExtentionMethodes.CaloricContentToConsole(salad);
+            EmptyLineAndReadKey();
+
+            Console.WriteLine("Состав салата -= {0} =-:", salad.Name);
+            salad.AddComponent(new Pepper("Перчик", 40, 100, "Желтый"));
+            ExtentionMethodes.PrintToConsole(salad.GetAllComponents());
+            EmptyLineAndReadKey();
+
+            ExtentionMethodes.CaloricContentToConsole(salad);
+            EmptyLineAndReadKey();
+
+            Console.WriteLine("Состав салата отсортированный по имени компонентов:");
+            salad.SortByName();
+            ExtentionMethodes.PrintToConsole(salad.GetAllComponents());
+            EmptyLineAndReadKey();
+
+            Console.WriteLine("Состав салата отсортированный по калорийности компонентов:");
             salad.SortByCaloricContent();
-            ExtentionMethodes.PrintToConsole(salad.Composition);
+            ExtentionMethodes.PrintToConsole(salad.GetAllComponents());
             EmptyLineAndReadKey();
                         
             int c = 20;

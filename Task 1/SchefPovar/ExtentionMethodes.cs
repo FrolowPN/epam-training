@@ -11,6 +11,7 @@ namespace SchefPovar
         {
             foreach (var item in list)
             {
+
                 Console.WriteLine(item.AllProperties);
             }
             

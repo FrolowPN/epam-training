@@ -18,14 +18,14 @@ namespace SchefPovar
             Name = "Навание";
             Volume = 0;
             CaloricContent = 0;
-            AllProperties = string.Format("- {0} \tвес - {1} гр. \tкалорийность - {2} ккал.", Name, Volume, CaloricContent);
+            AllProperties = string.Format("- {0} \tобъем - {1} мл. \tкалорийность - {2} ккал.", Name, Volume, CaloricContent);
         }
         public Oil(string name, int volume, int caloricContent)
         {
             Name = name;
             Volume = volume;
             CaloricContent = caloricContent;
-            AllProperties = string.Format("- {0} \tвес - {1} гр. \tкалорийность - {2} ккал.", Name, Volume, CaloricContent);
+            AllProperties = string.Format("- {0} \tобъем - {1} мл. \tкалорийность - {2} ккал.", Name, Volume, CaloricContent);
         }
     }
 }
