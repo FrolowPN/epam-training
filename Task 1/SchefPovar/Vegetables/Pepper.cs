@@ -10,9 +10,6 @@ namespace SchefPovar
     {
         public string Color { get; set; }
 
-        public new void Print()
-        {
-            Console.WriteLine("- {0} \tВес - {1} г. \tКалорийность - {2} ккал. \tЦвет - {3}", Name, Weight, CaloricContent, Color);
-        }
+      
     }
 }

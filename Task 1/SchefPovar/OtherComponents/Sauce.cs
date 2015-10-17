@@ -11,9 +11,6 @@ namespace SchefPovar
         public string Name { get; set; }
         public int CaloricContent { get; set; }
 
-        public void Print()
-        {
-            Console.WriteLine("Заправка - {0} \tКалорийность - {1} ккал.", Name, CaloricContent);
-        }
+       
     }
 }

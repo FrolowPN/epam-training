@@ -11,7 +11,7 @@ namespace SchefPovar
         string Name { get; set; }
         int CaloricContent { get; set; }
 
-        void Print();
+        
 
     }
 }

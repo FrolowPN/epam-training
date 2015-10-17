@@ -18,28 +18,32 @@ namespace SchefPovar
                                                         new Potato() { Name = "Сырой картофель", Weight = 200, CaloricContent = 560 },
                                                         new Oil() { Name = "Оливковое масло",Volume = 40 , CaloricContent = 60 }
                                                         });
-         
 
             Console.WriteLine("Состав салата -= {0} =-:", salad.Name);
-            salad.PrintComponent();
+            foreach (var item in salad.Composition)
+            {
+                ExtentionMethodes.PrintToConsole(item);
+            }
+            //Console.WriteLine("Состав салата -= {0} =-:", salad.Name);
+            //salad.PrintComponent();
             EmptyLineAndReadKey();
 
-            salad.CountCaloricContent();
-            EmptyLineAndReadKey();
+            //salad.CountCaloricContent();
+            //EmptyLineAndReadKey();
 
-            Console.WriteLine("Состав салата сортированнный по калорийности компонентов:");
-            salad.SortByCaloricContent();
-            EmptyLineAndReadKey();
+            //Console.WriteLine("Состав салата сортированнный по калорийности компонентов:");
+            //salad.SortByCaloricContent();
+            //EmptyLineAndReadKey();
 
-            Console.WriteLine("Состав салата сортированнный по названию компонентов:");
-            salad.SortByName();
-            EmptyLineAndReadKey();
+            //Console.WriteLine("Состав салата сортированнный по названию компонентов:");
+            //salad.SortByName();
+            //EmptyLineAndReadKey();
 
-            int c = 50;
-            int b = 100;
-            Console.WriteLine("Состав салата отобранный по калорийности компонентов от {0} до {1} ккал.:", c, b);
-            salad.PrintComponentsWithParametrs(c, b);
-            Console.ReadKey();
+            //int c = 50;
+            //int b = 100;
+            //Console.WriteLine("Состав салата отобранный по калорийности компонентов от {0} до {1} ккал.:", c, b);
+            //salad.PrintComponentsWithParametrs(c, b);
+            //Console.ReadKey();
 
 
         }

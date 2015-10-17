@@ -7,9 +7,9 @@ namespace SchefPovar
 {
     public static class ExtentionMethodes
     {
-        public static void PrintToConsole (this Vegetable item)
+        public static void PrintToConsole (this IComponent item)
         {
-            Console.WriteLine("- {0} \tВес - {1} г. \tКалорийность - {2} ккал.", item.Name, item.Weight, item.CaloricContent);
+            Console.WriteLine("Name - {0} \tКалорийность - {1} ккал.", item.Name, item.CaloricContent);
         }
     }
 }
