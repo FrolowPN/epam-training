@@ -11,6 +11,13 @@ namespace SchefPovar
         public string Name { get; set; }
         public List<IComponent> Composition { get; set; }
 
+        public Salad(string name, List<IComponent> list)
+        {
+            this.Name = name;
+            this.Composition = list;
+
+        }
+
         public void PrintComponent()
         {
             foreach (var item in Composition)
