@@ -21,18 +21,13 @@ namespace SchefPovar
        
         public void SortByName()
         {
-            //foreach (var item in Composition.OrderBy(x=>x.Name))
-            //{
-            //    item.Print();
-            //}
+            this.Composition = Composition.OrderBy(x => x.Name).ToList();
+            
         }
 
         public void SortByCaloricContent()
         {
-            //foreach (var item in Composition.OrderBy(x => x.CaloricContent))
-            //{
-            //    item.Print();
-            //}
+            this.Composition = Composition.OrderBy(x => x.CaloricContent).ToList();
         }
 
         public int CountCaloricContent()

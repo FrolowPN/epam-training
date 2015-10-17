@@ -22,20 +22,18 @@ namespace SchefPovar
             Console.WriteLine("Состав салата -= {0} =-:", salad.Name);
             ExtentionMethodes.PrintToConsole(salad.Composition);
             EmptyLineAndReadKey();
+
             ExtentionMethodes.CaloricContentToConsole(salad);
             EmptyLineAndReadKey();
 
-            //salad.CountCaloricContent();
-            //EmptyLineAndReadKey();
+            salad.SortByName();
+            ExtentionMethodes.PrintToConsole(salad.Composition);
+            EmptyLineAndReadKey();
 
-            //Console.WriteLine("Состав салата сортированнный по калорийности компонентов:");
-            //salad.SortByCaloricContent();
-            //EmptyLineAndReadKey();
-
-            //Console.WriteLine("Состав салата сортированнный по названию компонентов:");
-            //salad.SortByName();
-            //EmptyLineAndReadKey();
-
+            salad.SortByCaloricContent();
+            ExtentionMethodes.PrintToConsole(salad.Composition);
+            EmptyLineAndReadKey();
+                        
             int c = 20;
             int b = 100;
             Console.WriteLine("Состав салата отобранный по калорийности компонентов от {0} до {1} ккал.:", c, b);
