@@ -16,7 +16,8 @@ namespace SchefPovar
                                                         new Potato("Отварной картофель",200,400),
                                                         new Tomato("Черри", 80, 30),
                                                         new Potato("Сырой картофель", 200, 560),
-                                                        new Oil("Оливковое масло",40 , 60 )
+                                                        new Oil("Оливковое масло",40 , 60 ),
+                                                        new Sauce("Майонез", 50, 12, 75)
                                                         });
 
             Console.WriteLine("Состав салата -= {0} =-:", salad.GetName());

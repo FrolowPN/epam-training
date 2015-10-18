@@ -10,6 +10,7 @@ namespace SchefPovar
     {
         public string Name { get; private set; }
         int Weight { get; set; }
+        int FatContent { get; set; }
         int CaloricContentIn100gr { get; set; }
         public double CaloricContent { get; private set; }
         public string AllProperties { get; private set; }
@@ -17,16 +18,19 @@ namespace SchefPovar
         public Sauce()
         {
             Name = "Навание";
+            Weight = 0;
+            FatContent = 0;
             CaloricContent = 0;
-            AllProperties = string.Format("- {0} \tкалорийность - {2} ккал.", Name, CaloricContent);
+            AllProperties = string.Format("- {0} \tвес - {1} гр. \tкалорийность - {2} ккал. \tжирность - {3}% ", Name, Weight, CaloricContent, FatContent);
         }
-        public Sauce(string name, int weight, int caloricContentIn100gr)
+        public Sauce(string name, int weight, int fatContent, int caloricContentIn100gr)
         {
             Name = name;
-            Weight = Weight;
+            Weight = weight;
             CaloricContentIn100gr = caloricContentIn100gr;
+            FatContent = fatContent;
             CaloricContent = (Weight*CaloricContentIn100gr)/100;
-            AllProperties = string.Format("- {0} \tкалорийность - {2:0.0} ккал.", Name,  CaloricContent);
+            AllProperties = string.Format("- {0} \tвес - {1} гр. \tкалорийность - {2:0.0} ккал. \tжирность - {3}% ", Name, Weight, CaloricContent, FatContent);
         }
         public void Rename(string name)
         {

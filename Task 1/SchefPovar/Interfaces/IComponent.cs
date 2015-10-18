@@ -10,9 +10,7 @@ namespace SchefPovar
     {
         string Name { get; }
         double CaloricContent { get; }
-
         string AllProperties{get;}
-
         void Rename(string name);
 
     }

@@ -52,7 +52,7 @@ namespace SchefPovar
 
         public void SortByCaloricContent()
         {
-            this.Composition = Composition.OrderBy(x => x.CaloricContent).ToList();
+            Composition = Composition.OrderBy(x => x.CaloricContent).ToList();
         }
 
         public double CountCaloricContent()

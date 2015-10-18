@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExtentionMethodes.cs" />
-    <Compile Include="ISalad.cs" />
+    <Compile Include="Interfaces\ISalad.cs" />
     <Compile Include="Vegetables\Cucumber.cs" />
     <Compile Include="Interfaces\IComponent.cs" />
     <Compile Include="OtherComponents\Oil.cs" />
