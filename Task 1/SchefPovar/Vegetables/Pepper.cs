@@ -8,7 +8,7 @@ namespace SchefPovar
 {
     public class Pepper : Vegetable, IComponent
     {
-        public string Color { get; set; }
+        string Color { get; set; }
         
         public Pepper(string name, int weight, int caloricContentIn100gr, string color)
             : base(name, weight, caloricContentIn100gr)

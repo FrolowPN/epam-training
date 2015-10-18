@@ -13,5 +13,7 @@ namespace SchefPovar
 
         string AllProperties{get;}
 
+        void Rename(string name);
+
     }
 }

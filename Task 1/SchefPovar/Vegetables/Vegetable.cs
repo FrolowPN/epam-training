@@ -8,10 +8,10 @@ namespace SchefPovar
 {
     public class Vegetable : IComponent
     {
-        public string Name { get; set; }
+        public string Name { get; protected set; }
         protected int Weight { get; set; }
         protected int CaloricContentIn100gr { get; set; }
-        public double CaloricContent { get; set; }
+        public double CaloricContent { get; protected set; }
         public string AllProperties { get; protected set; }
 
         public Vegetable()
@@ -29,6 +29,11 @@ namespace SchefPovar
             CaloricContentIn100gr = caloricContentIn100gr;
             CaloricContent = (Weight * CaloricContentIn100gr)/100;
             AllProperties = string.Format("- {0} \tвес - {1} гр. \tкалорийность - {2:0.0} ккал.", Name, Weight, CaloricContent);
+        }
+
+        public void Rename(string name) 
+        {
+            Name = name;
         }
 
     }

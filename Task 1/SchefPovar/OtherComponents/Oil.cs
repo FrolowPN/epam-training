@@ -8,10 +8,10 @@ namespace SchefPovar
 {
     public class Oil : IComponent
     {
-        public string Name { get; set; }
-        public int CaloricContentIn100ml { get; set; }
-        public double CaloricContent { get; set; }
-        public int Volume { get; set; }
+        public string Name { get; private set; }
+        int CaloricContentIn100ml { get; set; }
+        public double CaloricContent { get; private set; }
+        int Volume { get; set; }
         public string AllProperties { get; private set; }
 
         public Oil()
@@ -29,6 +29,10 @@ namespace SchefPovar
             CaloricContentIn100ml = caloricContentIn100ml;
             CaloricContent = (Volume*CaloricContentIn100ml)/100;
             AllProperties = string.Format("- {0} \tобъем - {1} мл. \tкалорийность - {2:0.0} ккал.", Name, Volume, CaloricContent);
+        }
+        public void Rename(string name)
+        {
+            Name = name;
         }
     }
 }
