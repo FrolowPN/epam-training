@@ -9,7 +9,9 @@ namespace SchefPovar
     public class Sauce: IComponent
     {
         public string Name { get; set; }
-        public int CaloricContent { get; set; }
+        public int Weight { get; set; }
+        public int CaloricContentIn100gr { get; set; }
+        public double CaloricContent { get; set; }
         public string AllProperties { get; private set; }
 
         public Sauce()
@@ -18,11 +20,13 @@ namespace SchefPovar
             CaloricContent = 0;
             AllProperties = string.Format("- {0} \tкалорийность - {2} ккал.", Name, CaloricContent);
         }
-        public Sauce(string name, int volume, int caloricContent)
+        public Sauce(string name, int weight, int caloricContentIn100gr)
         {
             Name = name;
-            CaloricContent = caloricContent;
-            AllProperties = string.Format("- {0} \tкалорийность - {2} ккал.", Name,  CaloricContent);
+            Weight = Weight;
+            CaloricContentIn100gr = caloricContentIn100gr;
+            CaloricContent = (Weight*CaloricContentIn100gr)/100;
+            AllProperties = string.Format("- {0} \tкалорийность - {2:0.0} ккал.", Name,  CaloricContent);
         }
         
     }

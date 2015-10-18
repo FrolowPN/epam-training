@@ -10,7 +10,7 @@ namespace SchefPovar
         static void Main(string[] args)
         {
             var salad = new Salad("Все, что было", new List<IComponent>() { 
-                                                        new Cucumber("Салатный огурец", 100, 120 ),
+                                                        new Cucumber("Салатный огурец", 100, 12 ),
                                                         new Onion("Репчатый лук", 20, 20) ,
                                                         new Pepper("Перец", 40, 70,"Красный"),
                                                         new Potato("Отварной картофель",200,400),

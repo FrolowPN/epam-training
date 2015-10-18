@@ -9,23 +9,26 @@ namespace SchefPovar
     public class Vegetable : IComponent
     {
         public string Name { get; set; }
-        public int Weight { get; set; }
-        public int CaloricContent { get; set; }
+        protected int Weight { get; set; }
+        protected int CaloricContentIn100gr { get; set; }
+        public double CaloricContent { get; set; }
         public string AllProperties { get; protected set; }
 
         public Vegetable()
         {
             Name = "Навание";
             Weight = 0;
-            CaloricContent = 0;
+            CaloricContentIn100gr = 0;
+            CaloricContent = 0; CaloricContent = (Weight / 100) * CaloricContentIn100gr; 
             AllProperties = string.Format("- {0} \tвес - {1} гр. \tкалорийность - {2} ккал.", Name, Weight, CaloricContent);
         }
-        public Vegetable(string name, int weight, int caloricContent)
+        public Vegetable(string name, int weight, int caloricContentIn100gr)
         {
             Name = name;
             Weight = weight;
-            CaloricContent = caloricContent;
-            AllProperties = string.Format("- {0} \tвес - {1} гр. \tкалорийность - {2} ккал.", Name, Weight, CaloricContent);
+            CaloricContentIn100gr = caloricContentIn100gr;
+            CaloricContent = (Weight * CaloricContentIn100gr)/100;
+            AllProperties = string.Format("- {0} \tвес - {1} гр. \tкалорийность - {2:0.0} ккал.", Name, Weight, CaloricContent);
         }
 
     }

@@ -55,9 +55,9 @@ namespace SchefPovar
             this.Composition = Composition.OrderBy(x => x.CaloricContent).ToList();
         }
 
-        public int CountCaloricContent()
+        public double CountCaloricContent()
         {
-            int amountOfCalories = 0;
+            double amountOfCalories = 0;
             foreach (var item in Composition)
             {
                 amountOfCalories += item.CaloricContent;

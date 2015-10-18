@@ -9,7 +9,8 @@ namespace SchefPovar
     public class Oil : IComponent
     {
         public string Name { get; set; }
-        public int CaloricContent { get; set; }
+        public int CaloricContentIn100ml { get; set; }
+        public double CaloricContent { get; set; }
         public int Volume { get; set; }
         public string AllProperties { get; private set; }
 
@@ -17,15 +18,17 @@ namespace SchefPovar
         {
             Name = "Навание";
             Volume = 0;
+            CaloricContentIn100ml = 0;
             CaloricContent = 0;
             AllProperties = string.Format("- {0} \tобъем - {1} мл. \tкалорийность - {2} ккал.", Name, Volume, CaloricContent);
         }
-        public Oil(string name, int volume, int caloricContent)
+        public Oil(string name, int volume, int caloricContentIn100ml)
         {
             Name = name;
             Volume = volume;
-            CaloricContent = caloricContent;
-            AllProperties = string.Format("- {0} \tобъем - {1} мл. \tкалорийность - {2} ккал.", Name, Volume, CaloricContent);
+            CaloricContentIn100ml = caloricContentIn100ml;
+            CaloricContent = (Volume*CaloricContentIn100ml)/100;
+            AllProperties = string.Format("- {0} \tобъем - {1} мл. \tкалорийность - {2:0.0} ккал.", Name, Volume, CaloricContent);
         }
     }
 }
