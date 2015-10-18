@@ -7,7 +7,7 @@ namespace SchefPovar
 {
     public static class ExtentionMethodes
     {
-        public static void PrintToConsole (this List<IComponent> list)
+        public static void PrintToConsole (this IList<IComponent> list)
         {
             foreach (var item in list)
             {

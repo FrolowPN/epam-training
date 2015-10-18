@@ -26,21 +26,21 @@ namespace SchefPovar
             ExtentionMethodes.CaloricContentToConsole(salad);
             EmptyLineAndReadKey();
 
-            Console.WriteLine("Состав салата -= {0} =-:", salad.Name);
-            salad.DeleteComponent("Перец");
-            ExtentionMethodes.PrintToConsole(salad.GetAllComponents());
-            EmptyLineAndReadKey();
+            //Console.WriteLine("Состав салата -= {0} =-:", salad.Name);
+            //salad.DeleteComponent("Перец");
+            //ExtentionMethodes.PrintToConsole(salad.GetAllComponents());
+            //EmptyLineAndReadKey();
 
-            ExtentionMethodes.CaloricContentToConsole(salad);
-            EmptyLineAndReadKey();
+            //ExtentionMethodes.CaloricContentToConsole(salad);
+            //EmptyLineAndReadKey();
 
-            Console.WriteLine("Состав салата -= {0} =-:", salad.Name);
-            salad.AddComponent(new Pepper("Перчик", 40, 100, "Желтый"));
-            ExtentionMethodes.PrintToConsole(salad.GetAllComponents());
-            EmptyLineAndReadKey();
+            //Console.WriteLine("Состав салата -= {0} =-:", salad.Name);
+            //salad.AddComponent(new Pepper("Перчик", 40, 100, "Желтый"));
+            //ExtentionMethodes.PrintToConsole(salad.GetAllComponents());
+            //EmptyLineAndReadKey();
 
-            ExtentionMethodes.CaloricContentToConsole(salad);
-            EmptyLineAndReadKey();
+            //ExtentionMethodes.CaloricContentToConsole(salad);
+            //EmptyLineAndReadKey();
 
             Console.WriteLine("Состав салата отсортированный по имени компонентов:");
             salad.SortByName();

@@ -9,14 +9,14 @@ namespace SchefPovar
     public class Salad
     {
         public string Name { get; set; }
-        private List<IComponent> Composition { get; set; }
+        private IList<IComponent> Composition { get; set; }
 
         public Salad(string name, List<IComponent> list)
         {
             Name = name;
             Composition = list;
         }
-        public List<IComponent> GetAllComponents() 
+        public IList<IComponent> GetAllComponents() 
         {
             return Composition;
         }
@@ -65,7 +65,7 @@ namespace SchefPovar
             return amountOfCalories;
         }
 
-        public List<IComponent> ComponentsWithParametrs(int begin, int end)
+        public IList<IComponent> ComponentsWithParametrs(int begin, int end)
         {
             List<IComponent> list = this.Composition.Where(x => x.CaloricContent >= begin && x.CaloricContent <= end).ToList();
             return list;
