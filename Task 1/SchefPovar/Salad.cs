@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace SchefPovar
 {
-    public class Salad
+    public class Salad : ISalad
     {
-        public string Name { get; set; }
-        private IList<IComponent> Composition { get; set; }
+        string Name { get; set; }
+        IList<IComponent> Composition { get; set; }
 
         public Salad(string name, List<IComponent> list)
         {
@@ -71,5 +71,9 @@ namespace SchefPovar
             return list;
         }
 
+        public string GetName()
+        {
+            return Name;
+        }
     }
 }

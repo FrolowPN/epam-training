@@ -9,7 +9,7 @@ namespace SchefPovar
     {
         static void Main(string[] args)
         {
-            var salad = new Salad("Все, что было", new List<IComponent>() { 
+            ISalad salad = new Salad("Все, что было", new List<IComponent>() { 
                                                         new Cucumber("Салатный огурец", 100, 12 ),
                                                         new Onion("Репчатый лук", 20, 20) ,
                                                         new Pepper("Перец", 40, 70,"Красный"),
@@ -19,7 +19,7 @@ namespace SchefPovar
                                                         new Oil("Оливковое масло",40 , 60 )
                                                         });
 
-            Console.WriteLine("Состав салата -= {0} =-:", salad.Name);
+            Console.WriteLine("Состав салата -= {0} =-:", salad.GetName());
             ExtentionMethodes.PrintToConsole(salad.GetAllComponents());
             EmptyLineAndReadKey();
 
