@@ -3,36 +3,37 @@
   <Class Name="SchefPovar.Vegetable">
     <Position X="5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAACAAAAAAACAAAAAEAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAIAQAACAAAAAAACAAAAAAgAA=</HashCode>
       <FileName>Vegetables\Vegetable.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SchefPovar.Tomato">
-    <Position X="2.75" Y="3" Width="1.5" />
+    <Position X="2.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Vegetables\Tomato.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="SchefPovar.Sauce" BaseTypeListCollapsed="true">
-    <Position X="12" Y="2.75" Width="1.5" />
+  <Class Name="SchefPovar.Sauce" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAACAAAAAEAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAIAQAACQAAAAAACAAAAAAgAA=</HashCode>
       <FileName>OtherComponents\Sauce.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="SchefPovar.Salad">
-    <Position X="13.75" Y="0.5" Width="1.5" />
+  <Class Name="SchefPovar.Salad" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAABAAEAAIAKAAIAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAEAAAIKAEIAAAAAAQAEAAAAAAAAAAAAAAABAQ=</HashCode>
       <FileName>Salad.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="SchefPovar.Potato">
-    <Position X="9.5" Y="3" Width="1.5" />
+    <Position X="9.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Vegetables\Potato.cs</FileName>
@@ -40,42 +41,56 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SchefPovar.Pepper">
-    <Position X="7.25" Y="3" Width="1.5" />
+    <Position X="7.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAEAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
       <FileName>Vegetables\Pepper.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SchefPovar.Onion">
-    <Position X="5" Y="3" Width="1.5" />
+    <Position X="5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Vegetables\Onion.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="SchefPovar.Oil" BaseTypeListCollapsed="true">
-    <Position X="12" Y="0.5" Width="1.5" />
+  <Class Name="SchefPovar.Oil" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAACIAAAAEAAA=</HashCode>
+      <HashCode>AAQAgAAAAAAAAAAAAAAAAAQAAAAAAAAAACIAAAAAgAA=</HashCode>
       <FileName>OtherComponents\Oil.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="SchefPovar.Cucumber">
-    <Position X="0.5" Y="3" Width="1.5" />
+    <Position X="0.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Vegetables\Cucumber.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Interface Name="SchefPovar.IComponent">
-    <Position X="12" Y="4.5" Width="1.5" />
+  <Class Name="SchefPovar.ExtentionMethodes" Collapsed="true">
+    <Position X="12" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAACAAAAAEAAA=</HashCode>
+      <HashCode>AAAAABAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ExtentionMethodes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="SchefPovar.IComponent" Collapsed="true">
+    <Position X="12" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAQAAAAAAAAAACAAAAAAgAA=</HashCode>
       <FileName>Interfaces\IComponent.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SchefPovar.ISalad" Collapsed="true">
+    <Position X="13.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAIIAEIAAAAAAAAEAAAAAAAAAAAAAAABAQ=</HashCode>
+      <FileName>Interfaces\ISalad.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Tahoma" Size="8.25" />
