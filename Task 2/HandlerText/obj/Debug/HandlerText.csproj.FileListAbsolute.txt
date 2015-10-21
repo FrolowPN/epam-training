@@ -1,0 +1,1 @@
+D:\VS\epam-training\Task 2\HandlerText\bin\Debug\HandlerText.exe.config
