@@ -11,10 +11,12 @@ namespace HandlerText
     {
         string Value { get; set; }
         IList<Sentence> Sentences { get; set; }
+        IList<Word> Words { get; set; }
         public Text(string path)
         {
             ReadFile(path);
             ConvertToSentence();
+
         }
         public void ConvertToSentence()
         {
@@ -29,6 +31,7 @@ namespace HandlerText
             }
             Sentences = sentences;
         }
+       
         public void ReadFile(string pathfile)
         {
             StreamReader file = new StreamReader(pathfile);
