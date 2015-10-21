@@ -1,1 +1,8 @@
 D:\VS\epam-training\Task 2\HandlerText\bin\Debug\HandlerText.exe.config
+D:\VS\epam-training\Task 2\HandlerText\bin\Debug\HandlerText.exe
+D:\VS\epam-training\Task 2\HandlerText\bin\Debug\HandlerText.pdb
+D:\VS\epam-training\Task 2\HandlerText\obj\Debug\HandlerText.csprojResolveAssemblyReference.cache
+D:\VS\epam-training\Task 2\HandlerText\obj\Debug\HandlerText.exe
+D:\VS\epam-training\Task 2\HandlerText\obj\Debug\HandlerText.pdb
+D:\VS\epam-training\Task 2\HandlerText\obj\Debug\HandlerText.Properties.Resources.resources
+D:\VS\epam-training\Task 2\HandlerText\obj\Debug\HandlerText.csproj.GenerateResource.Cache

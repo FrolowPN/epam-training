@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace HandlerText
 {
-    class Sentence
+    public class Sentence
     {
+        public string Value { get; set; }
+        public Sentence(string value)
+        {
+            Value = value;
+        }
     }
 }

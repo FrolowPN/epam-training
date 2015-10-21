@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HandlerText
 {
-    class Word
+    public class Word
     {
     }
 }
