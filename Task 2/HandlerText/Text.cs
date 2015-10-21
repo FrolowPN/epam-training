@@ -9,8 +9,13 @@ namespace HandlerText
 {
     public class Text
     {
-        public string Value { get; set; }
-        public List<Sentence> Sentences { get; set; }
+        string Value { get; set; }
+        IList<Sentence> Sentences { get; set; }
+        public Text(string path)
+        {
+            ReadFile(path);
+            ConvertToSentence();
+        }
         public void ConvertToSentence()
         {
            var sentences = new List<Sentence>();
@@ -28,6 +33,10 @@ namespace HandlerText
         {
             StreamReader file = new StreamReader(pathfile);
             Value = file.ReadToEnd();
+        }
+        public IList<Sentence> GetSentences()
+        {
+            return Sentences;
         }
     }
 }

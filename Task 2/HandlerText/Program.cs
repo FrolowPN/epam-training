@@ -10,10 +10,12 @@ namespace HandlerText
     {
         static void Main(string[] args)
         {
-            var temp = new Text();
-            temp.ReadFile(@"D:\VS\epam-training\Task 2\HandlerText\Files\Book.txt");
-            temp.ConvertToSentence();
-            Console.WriteLine(temp.Value);
+            var temp = new Text(@"D:\VS\epam-training\Task 2\HandlerText\Files\Book.txt");
+            foreach (var item in temp.GetSentences())
+            {
+               Console.WriteLine(item.Value); 
+            }
+            
             Console.ReadKey();
 
         }
