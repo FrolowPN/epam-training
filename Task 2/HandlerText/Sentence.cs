@@ -13,7 +13,7 @@ namespace HandlerText
         public Sentence(string value)
         {
             Value = value;
-            ConvertToWord();
+            //ConvertToWord();
         }
         public void ConvertToWord()
         {
