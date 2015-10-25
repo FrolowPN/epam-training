@@ -8,5 +8,10 @@ namespace HandlerText
 {
     public class PunctuationMark
     {
+        public string Value { get; set; }
+        public PunctuationMark(string value)
+        {
+            Value = value;
+        }
     }
 }

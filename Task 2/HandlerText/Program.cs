@@ -14,6 +14,14 @@ namespace HandlerText
             foreach (var item in temp.GetSentences())
             {
                Console.WriteLine(item.Value);
+               foreach (var word in item.Words)
+               {
+                   Console.WriteLine(word.Value);
+               }
+               foreach (var punctuationMark in item.PunctuationMarks)
+               {
+                   Console.WriteLine(punctuationMark.Value);
+               }
             }
             
             Console.ReadKey();
