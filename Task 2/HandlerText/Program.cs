@@ -14,10 +14,6 @@ namespace HandlerText
             foreach (var item in temp.GetSentences())
             {
                Console.WriteLine(item.Value);
-               foreach (var word in item.Words)
-               {
-                   Console.WriteLine(word.Value);
-               }
             }
             
             Console.ReadKey();

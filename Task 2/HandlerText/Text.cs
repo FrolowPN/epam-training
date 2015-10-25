@@ -21,61 +21,48 @@ namespace HandlerText
         {
             int beginSentence = 0;
             var sentences = new List<Sentence>();
+            char[] endOfsentences = new char[] { '.', '!', '?' };
             for (int i = 0; i < Value.Length; i++)
             {
-                if (Value[i].ToString() == ".")
+                if (endOfsentences.Contains(Value[i]))
                 {
-                    if (i != Value.Length - 1)
+                    if (Value[i] == '.')
                     {
-                        if (Value[i].ToString() == "." && Value[i+1].ToString() == "." && Value[i+2].ToString() == ".")
+                        if (i < (Value.Length - 2))
                         {
-                            var temp = new Sentence(Value.Substring(beginSentence, (i+2) - beginSentence + 1));
-                        sentences.Add(temp);
-                        if (i != Value.Length - 1)
-                        {
-                            beginSentence = i + 2;
-                        }
-                        }
-                    }
-                    else
-                    {
-                        var temp = new Sentence(Value.Substring(beginSentence, i - beginSentence + 1));
-                        sentences.Add(temp);
-                        if (i != Value.Length - 1)
-                        {
-                            beginSentence = i + 2;
-                        }
-                    }
-                }
-                else
-                {
-                    if (Value[i].ToString() == "!")
-                    {
-                        var temp = new Sentence(Value.Substring(beginSentence, i - beginSentence + 1));
-                        sentences.Add(temp);
-                        if (i != Value.Length - 1)
-                        {
-                            beginSentence = i + 2;
-                        }
-                    }
-                    else
-                    {
-                        if (Value[i].ToString() == "?")
-                        {
-                            var temp = new Sentence(Value.Substring(beginSentence, i - beginSentence + 1));
-                            sentences.Add(temp);
-                            if (i != Value.Length - 1)
+                            if (Value[i + 1] == '.')
                             {
-                                beginSentence = i + 1;
+                                var temp = new Sentence(Value.Substring(beginSentence, (i + 2 - beginSentence) + 1));
+                                sentences.Add(temp);
+                                if (i != Value.Length - 1)
+                                {
+                                    beginSentence = i + 4;
+                                    i = i + 4;
+                                }
+                            }
+                            else
+                            {
+                                var temp = new Sentence(Value.Substring(beginSentence, (i - beginSentence) + 1));
+                                sentences.Add(temp);
+                                if (i != Value.Length - 1)
+                                {
+                                    beginSentence = i + 2;
+                                }
                             }
                         }
-                        else
+                    }
+                    else
+                    {
+                        var temp = new Sentence(Value.Substring(beginSentence, (i - beginSentence) + 1));
+                        sentences.Add(temp);
+                        if (i != Value.Length - 1)
                         {
-
+                            beginSentence = i + 2;
                         }
                     }
                 }
             }
+            Sentences = sentences;
         }
 
         public void ReadFile(string pathfile)
