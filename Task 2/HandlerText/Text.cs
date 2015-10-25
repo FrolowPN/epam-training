@@ -11,6 +11,7 @@ namespace HandlerText
     {
         string Value { get; set; }
         IList<Sentence> Sentences { get; set; }
+        public int CountSentence { get { return Sentences.Count(); } }
         public Text(string path)
         {
             ReadFile(path);

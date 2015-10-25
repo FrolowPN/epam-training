@@ -14,6 +14,8 @@ namespace HandlerText
             foreach (var item in temp.GetSentences())
             {
                Console.WriteLine(item.Value);
+               Console.WriteLine(item.Interrogative);
+               Console.WriteLine(item.CountWord);
                foreach (var word in item.Words)
                {
                    Console.WriteLine(word.Value);
