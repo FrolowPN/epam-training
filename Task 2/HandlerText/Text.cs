@@ -14,9 +14,8 @@ namespace HandlerText
         public int CountSentence { get { return Sentences.Count(); } }
         public Text(string path)
         {
-            ReadFile(path);
+            Value = GetTextFromFile(path);
             ConvertToSentence();
-
         }
         public void ConvertToSentence()
         {
@@ -66,10 +65,31 @@ namespace HandlerText
             Sentences = sentences;
         }
 
-        public void ReadFile(string pathfile)
+        public string GetTextFromFile(string pathfile)
         {
             StreamReader file = new StreamReader(pathfile);
-            Value = file.ReadToEnd();
+            var temp = file.ReadToEnd();
+            string result = "";
+            for (int i = 0; i < temp.Length; i++)
+            {
+                if (i < temp.Length - 1)
+                {
+                    if (temp[i] == ' ' && temp[i + 1] == ' ')
+                    {
+                        
+                    }
+                    else
+                    {
+result += temp[i];
+                    }
+                }
+                else
+                {
+                    result += temp[i];
+                }
+
+            }
+            return result;
         }
         public IList<Sentence> GetSentences()
         {
