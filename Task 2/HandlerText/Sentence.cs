@@ -35,93 +35,37 @@ namespace HandlerText
         {
             int beginWord = 0;
             var elements = new List<IElement>();
-            //var words = new List<Word>();
-            //var marks = new List<PunctuationMark>();
-            char[] characters = new char[] { ' ', ',', ':', ';', '"', '-' };
-            char[] endOfsentences = new char[] { '.', '!', '?' };
+            char[] characters = new char[] { ' ', ',', ':', ';', '"', '-', '.', '!', '?', '(' , ')' };
             for (int i = 0; i < Value.Length; i++)
             {
-                if (characters.Contains(Value[i]) || endOfsentences.Contains(Value[i]))
+                if (characters.Contains(Value[i]))
                 {
-                    if (Value[i] == '.')
+                    if ((Value[i] == ' ' || Value[i] == '"' || Value[i] == '(') && beginWord == i)
                     {
-                        if (i <= (Value.Length - 3))
-                        {
-                            if (Value[i + 1] == '.')
-                            {
-                                var tempCharacter = new PunctuationMark(Value.Substring(i, 3));
-                                elements.Add(tempCharacter);
-                                var tempWord = new Word(Value.Substring(beginWord, i - beginWord));
-                                elements.Add(tempWord);
-                                i = i + 2;
-                            }
-                        }
-                        else
-                        {
-                            var tempCharacter = new PunctuationMark(Value[i].ToString());
-                            elements.Add(tempCharacter);
-                            var tempWord = new Word(Value.Substring(beginWord, i - beginWord));
-                            elements.Add(tempWord);
-                        }
+                        elements.Add(new PunctuationMark(Value[i].ToString()));
+                        beginWord = i+1;
                     }
-                    else
+                    else if (Value[i]=='.' && i<Value.Length-2 && Value[i+1]=='.')
                     {
-                        //if (Value[i] == ' ')
-                        //{
-                        //    var tempWord = new Word(Value.Substring(beginWord, i - beginWord));
-                        //    words.Add(tempWord);
-                        //    if (i < Value.Length - 1)
-                        //    {
-                        //        beginWord = i + 1;
-
-                        //    }
-                        //}
-                        //else
-                        //{
-                            if (Value[i] == '"')
-                            {
-                                if (Value[i - 1] == ' ')
-                                {
-                                    var tempCharacter = new PunctuationMark(Value[i].ToString());
-                                    elements.Add(tempCharacter);
-                                    if (i < Value.Length - 1)
-                                    {
-                                        beginWord = i + 1;
-                                    }
-                                }
-                                else
-                                {
-                                    var tempCharacter = new PunctuationMark(Value[i].ToString());
-                                    elements.Add(tempCharacter);
-                                    var tempWord = new Word(Value.Substring(beginWord, i - beginWord));
-                                    elements.Add(tempWord);
-                                    if (i < Value.Length - 1)
-                                    {
-                                        beginWord = i + 1;
-                                    }
-                                }
-
-                            }
-                            else
-                            {
-                                var tempCharacter = new PunctuationMark(Value[i].ToString());
-                                elements.Add(tempCharacter);
-                                var tempWord = new Word(Value.Substring(beginWord, i - beginWord));
-                                elements.Add(tempWord);
-                                if (i < Value.Length - 1)
-                                {
-                                    beginWord = i + 1;
-                                }
-                            }
-                        //}
+                        if ((i - beginWord)!=0)
+                        {
+                            elements.Add(new Word(Value.Substring(beginWord, i - beginWord)));  
+                        }
+                        elements.Add(new PunctuationMark(Value.Substring(i, 3)));
+                        beginWord = i+3;
+                        i+=2;
+                    }
+                    else 
+                    {
+                        elements.Add(new Word(Value.Substring(beginWord, i - beginWord)));
+                        elements.Add(new PunctuationMark(Value[i].ToString()));
+                        beginWord = i+1; 
                     }
                 }
             }
-            //Words = words;
-            //PunctuationMarks = marks;
             Elements = elements;
         }
-
+      
         //public IList<Word> GetWords()
         //{
         //    return Words;
