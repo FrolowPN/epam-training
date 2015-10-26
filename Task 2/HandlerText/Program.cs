@@ -16,14 +16,14 @@ namespace HandlerText
                Console.WriteLine(item.Value);
                Console.WriteLine(item.Interrogative);
                Console.WriteLine(item.CountWord);
-               foreach (var word in item.Words)
+               foreach (var word in item.Elements.Where(x=> x.GetType() == typeof(Word)))
                {
                    Console.WriteLine(word.Value);
                }
-               foreach (var punctuationMark in item.PunctuationMarks)
-               {
-                   Console.WriteLine(punctuationMark.Value);
-               }
+               //foreach (var punctuationMark in item.PunctuationMarks)
+               //{
+               //    Console.WriteLine(punctuationMark.Value);
+               //}
             }
             
             Console.ReadKey();

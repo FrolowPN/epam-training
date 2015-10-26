@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HandlerText
 {
-    public class PunctuationMark
+    public class PunctuationMark : IElement
     {
         public string Value { get; set; }
         public PunctuationMark(string value)

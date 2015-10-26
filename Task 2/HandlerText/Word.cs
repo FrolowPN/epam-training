@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace HandlerText
 {
-    public class Word
+    public class Word : IElement
     {
         public string Value { get; set; }
+        public int CountLetter { get { return Value.Length; } }
         public Word(string value)
         {
             Value = value;

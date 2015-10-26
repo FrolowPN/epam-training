@@ -80,14 +80,13 @@ namespace HandlerText
                     }
                     else
                     {
-result += temp[i];
+                        result += temp[i];
                     }
                 }
                 else
                 {
                     result += temp[i];
                 }
-
             }
             return result;
         }

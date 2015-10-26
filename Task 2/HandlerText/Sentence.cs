@@ -9,9 +9,10 @@ namespace HandlerText
     public class Sentence
     {
         public string Value { get; set; }
-        public IList<Word> Words { get; set; }
-        public IList<PunctuationMark> PunctuationMarks { get; set; }
-        public int CountWord { get { return Words.Count(); } }
+        public IList<IElement> Elements { get; set; }
+        //public IList<Word> Words { get; set; }
+        //public IList<PunctuationMark> PunctuationMarks { get; set; }
+        public int CountWord { get { return Elements.Where(x => x.GetType() == typeof(Word)).Count(); } }
         public bool Interrogative
         {
             get
@@ -33,8 +34,9 @@ namespace HandlerText
         public void ConvertToWordAndMark()
         {
             int beginWord = 0;
-            var words = new List<Word>();
-            var marks = new List<PunctuationMark>();
+            var elements = new List<IElement>();
+            //var words = new List<Word>();
+            //var marks = new List<PunctuationMark>();
             char[] characters = new char[] { ' ', ',', ':', ';', '"', '-' };
             char[] endOfsentences = new char[] { '.', '!', '?' };
             for (int i = 0; i < Value.Length; i++)
@@ -48,40 +50,40 @@ namespace HandlerText
                             if (Value[i + 1] == '.')
                             {
                                 var tempCharacter = new PunctuationMark(Value.Substring(i, 3));
-                                marks.Add(tempCharacter);
+                                elements.Add(tempCharacter);
                                 var tempWord = new Word(Value.Substring(beginWord, i - beginWord));
-                                words.Add(tempWord);
+                                elements.Add(tempWord);
                                 i = i + 2;
                             }
                         }
                         else
                         {
                             var tempCharacter = new PunctuationMark(Value[i].ToString());
-                            marks.Add(tempCharacter);
+                            elements.Add(tempCharacter);
                             var tempWord = new Word(Value.Substring(beginWord, i - beginWord));
-                            words.Add(tempWord);
+                            elements.Add(tempWord);
                         }
                     }
                     else
                     {
-                        if (Value[i] == ' ')
-                        {
-                            var tempWord = new Word(Value.Substring(beginWord, i - beginWord));
-                            words.Add(tempWord);
-                            if (i < Value.Length - 1)
-                            {
-                                beginWord = i + 1;
+                        //if (Value[i] == ' ')
+                        //{
+                        //    var tempWord = new Word(Value.Substring(beginWord, i - beginWord));
+                        //    words.Add(tempWord);
+                        //    if (i < Value.Length - 1)
+                        //    {
+                        //        beginWord = i + 1;
 
-                            }
-                        }
-                        else
-                        {
+                        //    }
+                        //}
+                        //else
+                        //{
                             if (Value[i] == '"')
                             {
                                 if (Value[i - 1] == ' ')
                                 {
                                     var tempCharacter = new PunctuationMark(Value[i].ToString());
-                                    marks.Add(tempCharacter);
+                                    elements.Add(tempCharacter);
                                     if (i < Value.Length - 1)
                                     {
                                         beginWord = i + 1;
@@ -90,9 +92,9 @@ namespace HandlerText
                                 else
                                 {
                                     var tempCharacter = new PunctuationMark(Value[i].ToString());
-                                    marks.Add(tempCharacter);
+                                    elements.Add(tempCharacter);
                                     var tempWord = new Word(Value.Substring(beginWord, i - beginWord));
-                                    words.Add(tempWord);
+                                    elements.Add(tempWord);
                                     if (i < Value.Length - 1)
                                     {
                                         beginWord = i + 1;
@@ -103,26 +105,26 @@ namespace HandlerText
                             else
                             {
                                 var tempCharacter = new PunctuationMark(Value[i].ToString());
-                                marks.Add(tempCharacter);
+                                elements.Add(tempCharacter);
                                 var tempWord = new Word(Value.Substring(beginWord, i - beginWord));
-                                words.Add(tempWord);
+                                elements.Add(tempWord);
                                 if (i < Value.Length - 1)
                                 {
-                                    beginWord = i + 2;
-                                    i = i + 1;
+                                    beginWord = i + 1;
                                 }
                             }
-                        }
+                        //}
                     }
                 }
             }
-            Words = words;
-            PunctuationMarks = marks;
+            //Words = words;
+            //PunctuationMarks = marks;
+            Elements = elements;
         }
 
-        public IList<Word> GetWords()
-        {
-            return Words;
-        }
+        //public IList<Word> GetWords()
+        //{
+        //    return Words;
+        //}
     }
 }
