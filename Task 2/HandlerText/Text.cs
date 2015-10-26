@@ -15,9 +15,9 @@ namespace HandlerText
         public Text(string path)
         {
             Value = GetTextFromFile(path);
-            ConvertToSentence();
+            Sentences = ConvertToSentence(Value);
         }
-        public void ConvertToSentence()
+        public IList<Sentence> ConvertToSentence(string text)
         {
             int beginSentence = 0;
             var sentences = new List<Sentence>();
@@ -26,43 +26,20 @@ namespace HandlerText
             {
                 if (endOfsentences.Contains(Value[i]))
                 {
-                    if (Value[i] == '.')
+                    if (Value[i] == '.' && i < Value.Length - 2 && Value[i + 1] == '.')
                     {
-                        if (i < (Value.Length - 2))
-                        {
-                            if (Value[i + 1] == '.')
-                            {
-                                var temp = new Sentence(Value.Substring(beginSentence, (i + 2 - beginSentence) + 1));
-                                sentences.Add(temp);
-                                if (i != Value.Length - 1)
-                                {
-                                    beginSentence = i + 4;
-                                    i = i + 4;
-                                }
-                            }
-                            else
-                            {
-                                var temp = new Sentence(Value.Substring(beginSentence, (i - beginSentence) + 1));
-                                sentences.Add(temp);
-                                if (i != Value.Length - 1)
-                                {
-                                    beginSentence = i + 2;
-                                }
-                            }
-                        }
+                        sentences.Add(new Sentence(Value.Substring(beginSentence, i+3 - beginSentence)));
+                        beginSentence = i + 3;
+                        i = i + 2;
                     }
                     else
                     {
-                        var temp = new Sentence(Value.Substring(beginSentence, (i - beginSentence) + 1));
-                        sentences.Add(temp);
-                        if (i != Value.Length - 1)
-                        {
-                            beginSentence = i + 2;
-                        }
+                        sentences.Add(new Sentence(Value.Substring(beginSentence, i+1 - beginSentence)));
+                        beginSentence = i + 1;
                     }
                 }
             }
-            Sentences = sentences;
+            return sentences;
         }
 
         public string GetTextFromFile(string pathfile)
@@ -76,7 +53,7 @@ namespace HandlerText
                 {
                     if (temp[i] == ' ' && temp[i + 1] == ' ')
                     {
-                        
+
                     }
                     else
                     {
