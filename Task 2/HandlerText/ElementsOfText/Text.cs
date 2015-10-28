@@ -97,5 +97,22 @@ namespace HandlerText
             }
             return result;
         }
+        public void RemoveWord(int lengthWord, bool consonant)
+        {
+            List<Word> result = new List<Word>();
+            foreach (var item in Sentences)
+            {
+                foreach (Word word in item.Elements.Where(x => x.GetType() == typeof(Word)).ToList())
+                {
+                    if (word.CountLetter == lengthWord)
+                    {
+                        if (word.BeginWithConsonant == consonant)
+                        {
+                            item.Elements.Remove(word);
+                        }
+                    }
+                }
+            }
+        }
     }
 }

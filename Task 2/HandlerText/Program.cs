@@ -22,13 +22,18 @@ namespace HandlerText
             //   //}
             //   //Console.WriteLine();
             //   //Console.WriteLine();
+            ////}
+            //temp.RemoveWord(4, true);
+            //foreach (var item in temp.GetSentences())
+            //{
+            //    foreach (var elements in item.Elements)
+            //    {
+            //        Console.Write(elements.GetValue());
+            //    }
+         
             //}
-            foreach (var item in temp.GetWordGivenLength(12, false) )
-            {
-                Console.WriteLine(item.GetValue());
-            }
             
-            Console.ReadKey();
+            //Console.ReadKey();
 
         }
     }
