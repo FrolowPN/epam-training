@@ -8,7 +8,7 @@ namespace HandlerText
 {
     public abstract class Element
     {
-        string Value { get; set; }
+        protected string Value { get; set; }
         public Element(string value)
         {
             Value = value;

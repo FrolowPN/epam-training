@@ -6,17 +6,12 @@ using System.Threading.Tasks;
 
 namespace HandlerText
 {
-    public class Word : IElement
+    public class Word : Element, IElement
     {
-        string Value { get; set; }
         public int CountLetter { get { return Value.Length; } }
-        public Word(string value)
+        public Word(string value): base(value)
         {
-            Value = value;
         }
-        public string GetValue()
-        {
-            return Value;
-        }
+
     }
 }
