@@ -83,23 +83,18 @@ namespace HandlerText
             {
                 foreach (var item in tempSentences)
                 {
-                    IList<Word> tempWords = (IList<Word>)item.Elements.Where(x => x.GetType() == typeof(Word)).ToList();
-                    if (tempWords != null)
+                    foreach (Word word in item.Elements.Where(x => x.GetType() == typeof(Word)).ToList())
                     {
-                        foreach (Word word in tempWords)
+                        if (word.CountLetter == lengthWord)
                         {
-                            if (word.CountLetter == lengthWord)
+                            if (!result.Contains(word))
                             {
-                                if (!result.Contains(word))
-                                {
-                                    result.Add(word);
-                                }
+                                result.Add(word);
                             }
                         }
                     }
                 }
             }
-
             return result;
         }
     }
