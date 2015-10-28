@@ -71,5 +71,9 @@ namespace HandlerText
         {
             return Sentences;
         }
+        public IList<Sentence> GetSortByCountAscending() 
+        {
+          return  Sentences.OrderBy(x => x.CountWord).ToList();
+        }
     }
 }

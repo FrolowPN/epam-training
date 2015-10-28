@@ -9,5 +9,6 @@ namespace HandlerText
     public interface IText
     {
         IList<Sentence> GetSentences();
+        IList<Sentence> GetSortByCountAscending();
     }
 }
