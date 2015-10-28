@@ -8,11 +8,15 @@ namespace HandlerText
 {
     public class Word : IElement
     {
-        public string Value { get; set; }
+        string Value { get; set; }
         public int CountLetter { get { return Value.Length; } }
         public Word(string value)
         {
             Value = value;
+        }
+        public string GetValue()
+        {
+            return Value;
         }
     }
 }

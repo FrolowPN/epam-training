@@ -8,10 +8,14 @@ namespace HandlerText
 {
     public class PunctuationMark : IElement
     {
-        public string Value { get; set; }
+        string Value { get; set; }
         public PunctuationMark(string value)
         {
             Value = value;
+        }
+        public string GetValue()
+        {
+            return Value;
         }
     }
 }

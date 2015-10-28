@@ -8,6 +8,6 @@ namespace HandlerText
 {
     public interface IElement
     {
-        string Value { get; }
+        string GetValue();
     }
 }

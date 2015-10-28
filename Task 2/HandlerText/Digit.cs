@@ -8,10 +8,14 @@ namespace HandlerText
 {
     public class Digit :IElement
     {
-        public string Value { get; set; }
+        string Value { get; set; }
         public Digit(string value)
         {
             Value = value;
+        }
+        public string GetValue()
+        {
+            return Value;
         }
     }
 }

@@ -8,7 +8,7 @@ namespace HandlerText
 {
     public class Sentence
     {
-        public string Value { get; set; }
+        string Value { get; set; }
         public IList<IElement> Elements { get; set; }
         public int CountWord { get { return Elements.Where(x => x.GetType() == typeof(Word)).Count(); } }
         public bool Interrogative
@@ -81,5 +81,9 @@ namespace HandlerText
         //{
         //    return Words;
         //}
+        public string GetValue()
+        {
+            return Value;
+        }
     }
 }
