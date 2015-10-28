@@ -16,7 +16,7 @@ namespace HandlerText
                 Console.WriteLine(item.Value);
                 Console.WriteLine(item.Interrogative);
                 Console.WriteLine(item.CountWord);
-               foreach (var word in item.Elements)
+               foreach (var word in item.Elements.Where(x => x.GetType() == typeof(Digit)))
                {
                    Console.Write(word.Value);
                }
