@@ -28,13 +28,13 @@ namespace HandlerText
                 {
                     if (Value[i] == '.' && i < Value.Length - 2 && Value[i + 1] == '.')
                     {
-                        sentences.Add(new Sentence(Value.Substring(beginSentence, i+3 - beginSentence)));
+                        sentences.Add(new Sentence(Value.Substring(beginSentence, i + 3 - beginSentence)));
                         beginSentence = i + 3;
                         i = i + 2;
                     }
                     else
                     {
-                        sentences.Add(new Sentence(Value.Substring(beginSentence, i+1 - beginSentence)));
+                        sentences.Add(new Sentence(Value.Substring(beginSentence, i + 1 - beginSentence)));
                         beginSentence = i + 1;
                     }
                 }
@@ -71,9 +71,36 @@ namespace HandlerText
         {
             return Sentences;
         }
-        public IList<Sentence> GetSortByCountAscending() 
+        public IList<Sentence> GetSortByCountAscending()
         {
-          return  Sentences.OrderBy(x => x.CountWord).ToList();
+            return Sentences.OrderBy(x => x.CountWord).ToList();
+        }
+        public IList<Word> GetWordGivenLength(int lengthWord, bool interrogative)
+        {
+            IList<Sentence> tempSentences = Sentences.Where(x => x.Interrogative == interrogative).ToList();
+            List<Word> result = new List<Word>();
+            if (tempSentences != null)
+            {
+                foreach (var item in tempSentences)
+                {
+                    IList<Word> tempWords = (IList<Word>)item.Elements.Where(x => x.GetType() == typeof(Word)).ToList();
+                    if (tempWords != null)
+                    {
+                        foreach (Word word in tempWords)
+                        {
+                            if (word.CountLetter == lengthWord)
+                            {
+                                if (!result.Contains(word))
+                                {
+                                    result.Add(word);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            return result;
         }
     }
 }
