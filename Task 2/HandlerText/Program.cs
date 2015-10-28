@@ -22,10 +22,6 @@ namespace HandlerText
                }
                Console.WriteLine();
                Console.WriteLine();
-               //foreach (var punctuationMark in item.PunctuationMarks)
-               //{
-               //    Console.WriteLine(punctuationMark.Value);
-               //}
             }
             
             Console.ReadKey();

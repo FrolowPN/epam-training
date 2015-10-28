@@ -6,16 +6,10 @@ using System.Threading.Tasks;
 
 namespace HandlerText
 {
-    public class PunctuationMark : IElement
+    public class PunctuationMark : Element, IElement
     {
-        string Value { get; set; }
-        public PunctuationMark(string value)
+        public PunctuationMark(string value):base(value)
         {
-            Value = value;
-        }
-        public string GetValue()
-        {
-            return Value;
         }
     }
 }

@@ -6,16 +6,10 @@ using System.Threading.Tasks;
 
 namespace HandlerText
 {
-    public class Digit :IElement
+    public class Digit : Element, IElement
     {
-        string Value { get; set; }
-        public Digit(string value)
+        public Digit(string value): base(value)
         {
-            Value = value;
-        }
-        public string GetValue()
-        {
-            return Value;
         }
     }
 }
