@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HandlerText
 {
-    public class Text
+    public class Text : IText
     {
         string Value { get; set; }
         IList<Sentence> Sentences { get; set; }
