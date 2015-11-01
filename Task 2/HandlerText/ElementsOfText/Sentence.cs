@@ -8,7 +8,7 @@ namespace HandlerText
 {
     public class Sentence : ISentence
     {
-        string Value { get; set; }
+        //string Value { get; set; }
         public IList<IElement> Elements { get; private set; }
         public int CountWord { get { return Elements.Where(x => x.GetType() == typeof(Word)).Count(); } }
         public bool Interrogative
@@ -16,11 +16,14 @@ namespace HandlerText
             get
             {
                 bool temp = false;
-                if (Value[Value.Length - 1] == '?')
+                foreach (var item in Elements.Where(x => x.GetType() == typeof(PunctuationMark)))
+                {
+                  if (item.GetValue() == "?")
                 {
                     temp = true;
                 }
-                return temp;
+                }
+                return temp;   
             }
         }
 

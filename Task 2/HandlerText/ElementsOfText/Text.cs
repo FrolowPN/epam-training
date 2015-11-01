@@ -48,12 +48,14 @@ namespace HandlerText
         }
         public IList<ISentence> GetSortByCountAscending()
         {
+            
             return Sentences.OrderBy(x => x.CountWord).ToList();
         }
         public IList<Word> GetWordGivenLength(int lengthWord, bool interrogative)
         {
             IList<ISentence> tempSentences = Sentences.Where(x => x.Interrogative == interrogative).ToList();
             List<Word> result = new List<Word>();
+            
             if (tempSentences != null)
             {
                 foreach (var item in tempSentences)
@@ -61,10 +63,21 @@ namespace HandlerText
                     foreach (Word word in item.GetElements().Where(x => x.GetType() == typeof(Word)).ToList())
                     {
                         if (word.CountLetter == lengthWord)
-                        {
-                            if (!result.Contains(word))
+                        {int flag = 0;
+                            foreach (var temper in result)
                             {
-                                result.Add(word);
+                                if (temper.GetValue() == word.GetValue())
+                                {
+                                    flag++;
+                                }
+                            }
+                            if (flag == 0)
+                            {
+                               result.Add(word); 
+                            }
+                            else
+                            {
+                                flag = 0;
                             }
                         }
                     }
@@ -117,23 +130,6 @@ namespace HandlerText
                 }
             }
             Sentences[numberSentence].SetElements(result);
-
-            //foreach (var item in temp.Where(x => x.GetType() == typeof(Word)))
-            //{
-            //    var word = (Word)item;
-            //    if (word.CountLetter == lengthWord)
-            //    {
-            //        var helper = item;
-            //        foreach (var element in elementOfSubstring)
-            //        {
-
-            //            Sentences[numberSentence].Elements.Insert(Sentences[numberSentence].Elements.IndexOf(helper), element);
-            //        }
-
-            //    }
-
-            //}
-
         }
     }
 }
