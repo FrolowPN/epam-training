@@ -8,10 +8,10 @@ namespace HandlerText
 {
    public static class Parser
     {
-       public static IList<Sentence> ParseOnSentences(string text)
+       public static IList<ISentence> ParseOnSentences(string text)
        {
            int beginSentence = 0;
-           var sentences = new List<Sentence>();
+           var sentences = new List<ISentence>();
            char[] endOfsentences = new char[] { '.', '!', '?' };
            for (int i = 0; i < text.Length; i++)
            {

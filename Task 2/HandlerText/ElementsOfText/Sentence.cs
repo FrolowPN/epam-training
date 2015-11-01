@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HandlerText
 {
-    public class Sentence
+    public class Sentence : ISentence
     {
         string Value { get; set; }
         public IList<IElement> Elements { get; set; }
@@ -29,10 +29,11 @@ namespace HandlerText
 
             Elements = Parser.ParseToElements(sentence);
         }
-        
-        public string GetValue()
+
+        public IList<IElement> GetElements()
         {
-            return Value;
+            return Elements;
         }
+
     }
 }

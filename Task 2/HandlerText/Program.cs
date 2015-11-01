@@ -13,7 +13,10 @@ namespace HandlerText
             IText temp = new Text(@"D:\VS\epam-training\Task 2\HandlerText\Files\Book.txt");
             foreach (var item in temp.GetSentences())
             {
-                Console.Write(item.GetValue());
+                foreach (var element in item.GetElements())
+                {
+                    Console.Write(element.GetValue());
+                }
             }
            
             Console.ReadKey();

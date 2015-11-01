@@ -8,8 +8,8 @@ namespace HandlerText
 {
     public interface IText
     {
-        IList<Sentence> GetSentences();
-        IList<Sentence> GetSortByCountAscending();
+        IList<ISentence> GetSentences();
+        IList<ISentence> GetSortByCountAscending();
         IList<Word> GetWordGivenLength(int lengthWord, bool interrogative);
         void RemoveWord(int lengthWord, bool consonant);
     }

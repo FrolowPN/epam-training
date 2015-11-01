@@ -10,7 +10,7 @@ namespace HandlerText
     public class Text : IText
     {
         string Value { get; set; }
-        IList<Sentence> Sentences { get; set; }
+        IList<ISentence> Sentences { get; set; }
         public int CountSentence { get { return Sentences.Count(); } }
         public Text(string path)
         {
@@ -42,23 +42,23 @@ namespace HandlerText
             }
             return result;
         }
-        public IList<Sentence> GetSentences()
+        public IList<ISentence> GetSentences()
         {
             return Sentences;
         }
-        public IList<Sentence> GetSortByCountAscending()
+        public IList<ISentence> GetSortByCountAscending()
         {
             return Sentences.OrderBy(x => x.CountWord).ToList();
         }
         public IList<Word> GetWordGivenLength(int lengthWord, bool interrogative)
         {
-            IList<Sentence> tempSentences = Sentences.Where(x => x.Interrogative == interrogative).ToList();
+            IList<ISentence> tempSentences = Sentences.Where(x => x.Interrogative == interrogative).ToList();
             List<Word> result = new List<Word>();
             if (tempSentences != null)
             {
                 foreach (var item in tempSentences)
                 {
-                    foreach (Word word in item.Elements.Where(x => x.GetType() == typeof(Word)).ToList())
+                    foreach (Word word in item.GetElements().Where(x => x.GetType() == typeof(Word)).ToList())
                     {
                         if (word.CountLetter == lengthWord)
                         {
@@ -77,7 +77,7 @@ namespace HandlerText
             List<Word> result = new List<Word>();
             foreach (var item in Sentences)
             {
-                foreach (Word word in item.Elements.Where(x => x.GetType() == typeof(Word)).ToList())
+                foreach (Word word in item.GetElements().Where(x => x.GetType() == typeof(Word)).ToList())
                 {
                     if (word.CountLetter == lengthWord)
                     {
