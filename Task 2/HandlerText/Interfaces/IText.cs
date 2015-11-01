@@ -12,5 +12,6 @@ namespace HandlerText
         IList<ISentence> GetSortByCountAscending();
         IList<Word> GetWordGivenLength(int lengthWord, bool interrogative);
         void RemoveWord(int lengthWord, bool consonant);
+        void ChangeWordOnSubstring(int numberSentence, int lengthWord, string substring);
     }
 }

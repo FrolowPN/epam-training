@@ -15,7 +15,7 @@ namespace HandlerText
         public Text(string path)
         {
             Sentences = Parser.ParseOnSentences(GetTextFromFile(path));
-            
+
         }
         public string GetTextFromFile(string pathfile)
         {
@@ -88,6 +88,52 @@ namespace HandlerText
                     }
                 }
             }
+        }
+        public void ChangeWordOnSubstring(int numberSentence, int lengthWord, string substring)
+        {
+            IList<IElement> elementOfSubstring = Parser.ParseToElements(substring);
+            IList<IElement> temp = Sentences[numberSentence].Elements;
+            IList<IElement> result = new List<IElement> { };
+            foreach (var item in temp)
+            {
+                if (item.GetType()==typeof(Word))
+                {
+                    Word temper = (Word)item;
+                    if (temper.CountLetter == lengthWord)
+                    {
+                        foreach (var element in elementOfSubstring)
+                        {
+                            result.Add(element);
+                        }
+                    }
+                    else
+                    {
+                        result.Add(item);
+                    }
+                }
+                else
+                {
+                    result.Add(item);      
+                }
+            }
+            Sentences[numberSentence].SetElements(result);
+
+            //foreach (var item in temp.Where(x => x.GetType() == typeof(Word)))
+            //{
+            //    var word = (Word)item;
+            //    if (word.CountLetter == lengthWord)
+            //    {
+            //        var helper = item;
+            //        foreach (var element in elementOfSubstring)
+            //        {
+
+            //            Sentences[numberSentence].Elements.Insert(Sentences[numberSentence].Elements.IndexOf(helper), element);
+            //        }
+
+            //    }
+
+            //}
+
         }
     }
 }

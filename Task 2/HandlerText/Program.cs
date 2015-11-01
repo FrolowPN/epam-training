@@ -11,11 +11,12 @@ namespace HandlerText
         static void Main(string[] args)
         {
             IText temp = new Text(@"D:\VS\epam-training\Task 2\HandlerText\Files\Book.txt");
+           temp.ChangeWordOnSubstring(2, 3, "CHANGED WORD");
             foreach (var item in temp.GetSentences())
             {
-                foreach (var element in item.GetElements())
+                foreach (var elem in item.GetElements())
                 {
-                    Console.Write(element.GetValue());
+                    Console.Write(elem.GetValue());
                 }
             }
            

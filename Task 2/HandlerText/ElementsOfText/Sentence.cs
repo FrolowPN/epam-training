@@ -9,7 +9,7 @@ namespace HandlerText
     public class Sentence : ISentence
     {
         string Value { get; set; }
-        public IList<IElement> Elements { get; set; }
+        public IList<IElement> Elements { get; private set; }
         public int CountWord { get { return Elements.Where(x => x.GetType() == typeof(Word)).Count(); } }
         public bool Interrogative
         {
@@ -33,6 +33,11 @@ namespace HandlerText
         public IList<IElement> GetElements()
         {
             return Elements;
+        }
+
+        public void SetElements(IList<IElement> elements) 
+        {
+            Elements = elements;
         }
 
     }

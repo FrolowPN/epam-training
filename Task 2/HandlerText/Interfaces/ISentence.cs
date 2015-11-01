@@ -12,5 +12,6 @@ namespace HandlerText
         bool Interrogative { get; }
         int CountWord { get; } 
         IList<IElement> GetElements();
+        void SetElements(IList<IElement> elements);
     }
 }

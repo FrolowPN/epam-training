@@ -77,6 +77,10 @@ namespace HandlerText
                        beginWord = i + 1;
                    }
                }
+               else if (i == sentence.Length-1)
+               {
+                   elements.Add(new Word(sentence.Substring(beginWord, i - beginWord+1)));  
+               }
            }
            return elements;
        }
