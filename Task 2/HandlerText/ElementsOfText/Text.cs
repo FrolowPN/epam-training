@@ -17,8 +17,6 @@ namespace HandlerText
             Sentences = Parser.ParseOnSentences(GetTextFromFile(path));
             
         }
-       
-
         public string GetTextFromFile(string pathfile)
         {
             StreamReader file = new StreamReader(pathfile);
