@@ -14,33 +14,10 @@ namespace HandlerText
         public int CountSentence { get { return Sentences.Count(); } }
         public Text(string path)
         {
-            Value = GetTextFromFile(path);
-            Sentences = ConvertToSentence(Value);
+            Sentences = Parser.ParseOnSentences(GetTextFromFile(path));
+            
         }
-        public IList<Sentence> ConvertToSentence(string text)
-        {
-            int beginSentence = 0;
-            var sentences = new List<Sentence>();
-            char[] endOfsentences = new char[] { '.', '!', '?' };
-            for (int i = 0; i < Value.Length; i++)
-            {
-                if (endOfsentences.Contains(Value[i]))
-                {
-                    if (Value[i] == '.' && i < Value.Length - 2 && Value[i + 1] == '.')
-                    {
-                        sentences.Add(new Sentence(Value.Substring(beginSentence, i + 3 - beginSentence)));
-                        beginSentence = i + 3;
-                        i = i + 2;
-                    }
-                    else
-                    {
-                        sentences.Add(new Sentence(Value.Substring(beginSentence, i + 1 - beginSentence)));
-                        beginSentence = i + 1;
-                    }
-                }
-            }
-            return sentences;
-        }
+       
 
         public string GetTextFromFile(string pathfile)
         {
