@@ -1,0 +1,116 @@
+Вывод предлождений отсортированных по количеству слов!
+--------------------------------------------------------------------
+Ready?
+Количество слов = 1 
+
+ Go!
+Количество слов = 1 
+
+
+Rule 3: Mistrust authority - promote decentralization.
+Количество слов = 5 
+
+
+Rule 2: All information should be free.
+Количество слов = 6 
+
+ Some of the members really built model trains.
+Количество слов = 8 
+
+
+Rule 6: Computers can change your life for the better.
+Количество слов = 9 
+
+
+Rule 5: You can create art and beauty on a computer.
+Количество слов = 10 
+
+ Spending hours at TMRC creating better circuitry was called "a mere hack".
+Количество слов = 12 
+
+ But many were more interested in the wires and circuits underneath the track platform.
+Количество слов = 14 
+
+
+(4) These rules made programming at MIT's Artificial Intelligence Laboratory a challenging, all encompassing endeavor.
+Количество слов = 14 
+
+
+(2) During the spring of 1959, a new course was offered at MIT, a freshman programming class.
+Количество слов = 15 
+
+ The act of making the computer work more elegantly was, to a bonafide hacker, awe-inspiring.
+Количество слов = 16 
+
+ Eventually they formed a group and created the first set of hacker's rules, called the Hacker's Ethic.
+Количество слов = 17 
+
+
+Rule 4: Hackers should be judged by their hacking, not bogus criteria such as degrees, race, or position.
+Количество слов = 17 
+
+ Those members who were interested in creating innovative, stylistic, and technically clever circuits called themselves (with pride) hackers.
+Количество слов = 18 
+
+ The program would be made available to others who would try to perform the same task with fewer instructions.
+Количество слов = 19 
+
+ Soon the hackers of the railroad club were spending days, hours, and nights hacking away at their computer, an IBM 704.
+Количество слов = 20 
+
+
+(1) The first "hackers" were students at the Massachusetts Institute of Technology (MIT) who belonged to the TMRC (Tech Model Railroad Club).
+Количество слов = 21 
+
+ Instead of creating a better circuit, their hack became creating faster, more efficient program - with the least number of lines of code.
+Количество слов = 22 
+
+ Just for the exhilaration of programming, students in the Al Lab would write a new program to perform even the smallest tasks.
+Количество слов = 22 
+
+
+(5) Hackers were given free reign on the computer by two AI Lab professors, "Uncle" John McCarthy and Marvin Minsky, who realized that hacking created new insights.
+Количество слов = 26 
+
+
+(3) Steven Levy, in his book Hackers, presented the rules:
+Rule 1: Access to computers - and anything, which might teach you, something about the way the world works - should be unlimited and total.
+Количество слов = 31 
+
+ Over the years, the AI Lab created many innovations: LIFE, a game about survival; LISP, a new kind of programming language; the first computer chess game; The CAVE, the first computer adventure; and SPACEWAR, the first video game.
+Количество слов = 38 
+
+Вывод слов заданной длины без повторений из вопросительных предложений!
+--------------------------------------------------------------------
+Ready 
+
+
+Замена в предложении данного номера слов данной длинны на заданную подстроку!
+--------------------------------------------------------------------
+Ready? Go!
+(1) CHANGED WORD first "hackers" were students at CHANGED WORD Massachusetts Institute of Technology (CHANGED WORD) CHANGED WORD belonged to CHANGED WORD TMRC (Tech Model Railroad Club). Some of the members really built model trains. But many were more interested in the wires and circuits underneath the track platform. Spending hours at TMRC creating better circuitry was called "a mere hack". Those members who were interested in creating innovative, stylistic, and technically clever circuits called themselves (with pride) hackers.
+(2) During the spring of 1959, a new course was offered at MIT, a freshman programming class. Soon the hackers of the railroad club were spending days, hours, and nights hacking away at their computer, an IBM 704. Instead of creating a better circuit, their hack became creating faster, more efficient program - with the least number of lines of code. Eventually they formed a group and created the first set of hacker's rules, called the Hacker's Ethic.
+(3) Steven Levy, in his book Hackers, presented the rules:
+Rule 1: Access to computers - and anything, which might teach you, something about the way the world works - should be unlimited and total.
+Rule 2: All information should be free.
+Rule 3: Mistrust authority - promote decentralization.
+Rule 4: Hackers should be judged by their hacking, not bogus criteria such as degrees, race, or position.
+Rule 5: You can create art and beauty on a computer.
+Rule 6: Computers can change your life for the better.
+(4) These rules made programming at MIT's Artificial Intelligence Laboratory a challenging, all encompassing endeavor. Just for the exhilaration of programming, students in the Al Lab would write a new program to perform even the smallest tasks. The program would be made available to others who would try to perform the same task with fewer instructions. The act of making the computer work more elegantly was, to a bonafide hacker, awe-inspiring.
+(5) Hackers were given free reign on the computer by two AI Lab professors, "Uncle" John McCarthy and Marvin Minsky, who realized that hacking created new insights. Over the years, the AI Lab created many innovations: LIFE, a game about survival; LISP, a new kind of programming language; the first computer chess game; The CAVE, the first computer adventure; and SPACEWAR, the first video game.
+
+Удаление слов заданной длины начинающихся на согласную букву
+--------------------------------------------------------------------
+Ready? Go!
+(1) CHANGED WORD first "hackers" were students at CHANGED WORD Massachusetts Institute of Technology (CHANGED WORD) CHANGED WORD belonged to CHANGED WORD TMRC (Tech Model Railroad Club). Some of  members really built model trains.  many were more interested in  wires and circuits underneath  track platform. Spending hours at TMRC creating better circuitry  called "a mere hack". Those members  were interested in creating innovative, stylistic, and technically clever circuits called themselves (with pride) hackers.
+(2) During  spring of 1959, a  course  offered at , a freshman programming class. Soon  hackers of  railroad club were spending days, hours, and nights hacking away at their computer, an IBM 704. Instead of creating a better circuit, their hack became creating faster, more efficient program - with  least number of lines of code. Eventually they formed a group and created  first  of hacker's rules, called  Hacker's Ethic.
+(3) Steven Levy, in  book Hackers, presented  rules:
+Rule 1: Access to computers - and anything, which might teach you, something about    world works - should be unlimited and total.
+Rule 2: All information should be free.
+Rule 3: Mistrust authority - promote decentralization.
+Rule 4: Hackers should be judged by their hacking,  bogus criteria such as degrees, race, or position.
+Rule 5: You  create art and beauty on a computer.
+Rule 6: Computers  change your life   better.
+(4) These rules made programming at MIT's Artificial Intelligence Laboratory a challenging, all encompassing endeavor. Just   exhilaration of programming, students in  Al  would write a  program to perform even  smallest tasks.  program would be made available to others  would  to perform  same task with fewer instructions.  act of making  computer work more elegantly , to a bonafide hacker, awe-inspiring.
+(5) Hackers were given free reign on  computer by  AI  professors, "Uncle" John McCarthy and Marvin Minsky,  realized that hacking created  insights. Over  years,  AI  created many innovations: LIFE, a game about survival; LISP, a  kind of programming language;  first computer chess game;  CAVE,  first computer adventure; and SPACEWAR,  first video game.
