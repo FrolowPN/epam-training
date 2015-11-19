@@ -1,0 +1,1 @@
+D:\VS\epam-training\Task 4\ParserFiles\bin\Debug\ParserFiles.exe.config
