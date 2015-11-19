@@ -13,5 +13,6 @@ namespace DA
         public int IdClient { get; set; }
         public string Product { get; set; }
         public double Cost { get; set; }
+        public virtual File File { get; set; }
     }
 }

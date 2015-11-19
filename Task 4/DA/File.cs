@@ -8,5 +8,9 @@ namespace DA
 {
     public class File
     {
+        public int Id { get; set; }
+        public int IdManager { get; set; }
+        public DateTime DateFile { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }
