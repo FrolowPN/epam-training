@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace DA
 {
-    class Order
+    public class Order
     {
+        public int Id { get; set; }
+        public DateTime DateOrder { get; set; }
+        public int IdClient { get; set; }
+        public string Product { get; set; }
+        public double Cost { get; set; }
     }
 }
