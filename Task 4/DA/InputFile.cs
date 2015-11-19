@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DA
 {
-    public class File
+    public class InputFile
     {
         public int Id { get; set; }
         public int IdManager { get; set; }
