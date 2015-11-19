@@ -1,0 +1,4 @@
+D:\VS\epam-training\Task 4\ParserFiles\BL\bin\Debug\BL.dll
+D:\VS\epam-training\Task 4\ParserFiles\BL\bin\Debug\BL.pdb
+D:\VS\epam-training\Task 4\ParserFiles\BL\obj\Debug\BL.dll
+D:\VS\epam-training\Task 4\ParserFiles\BL\obj\Debug\BL.pdb

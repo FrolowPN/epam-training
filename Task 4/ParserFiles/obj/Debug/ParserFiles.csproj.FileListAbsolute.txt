@@ -1,1 +1,6 @@
 D:\VS\epam-training\Task 4\ParserFiles\bin\Debug\ParserFiles.exe.config
+D:\VS\epam-training\Task 4\ParserFiles\bin\Debug\ParserFiles.exe
+D:\VS\epam-training\Task 4\ParserFiles\bin\Debug\ParserFiles.pdb
+D:\VS\epam-training\Task 4\ParserFiles\obj\Debug\ParserFiles.csprojResolveAssemblyReference.cache
+D:\VS\epam-training\Task 4\ParserFiles\obj\Debug\ParserFiles.exe
+D:\VS\epam-training\Task 4\ParserFiles\obj\Debug\ParserFiles.pdb

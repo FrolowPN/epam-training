@@ -1,0 +1,10 @@
+D:\VS\epam-training\Task 4\DA\bin\Debug\DA.dll.config
+D:\VS\epam-training\Task 4\DA\bin\Debug\DA.dll
+D:\VS\epam-training\Task 4\DA\bin\Debug\DA.pdb
+D:\VS\epam-training\Task 4\DA\bin\Debug\EntityFramework.dll
+D:\VS\epam-training\Task 4\DA\bin\Debug\EntityFramework.SqlServer.dll
+D:\VS\epam-training\Task 4\DA\bin\Debug\EntityFramework.xml
+D:\VS\epam-training\Task 4\DA\bin\Debug\EntityFramework.SqlServer.xml
+D:\VS\epam-training\Task 4\DA\obj\Debug\DA.csprojResolveAssemblyReference.cache
+D:\VS\epam-training\Task 4\DA\obj\Debug\DA.dll
+D:\VS\epam-training\Task 4\DA\obj\Debug\DA.pdb
