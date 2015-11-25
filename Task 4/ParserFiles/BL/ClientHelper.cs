@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BL
 {
-    public class ClientManager
+    public class ClientHelper
     {
         public void AddClient(string clientName)
         {
