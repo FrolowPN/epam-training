@@ -4,3 +4,11 @@ D:\VS\epam-training\Task 4\ParserFiles\bin\Debug\ParserFiles.pdb
 D:\VS\epam-training\Task 4\ParserFiles\obj\Debug\ParserFiles.csprojResolveAssemblyReference.cache
 D:\VS\epam-training\Task 4\ParserFiles\obj\Debug\ParserFiles.exe
 D:\VS\epam-training\Task 4\ParserFiles\obj\Debug\ParserFiles.pdb
+D:\VS\epam-training\Task 4\ParserFiles\bin\Debug\BL.dll
+D:\VS\epam-training\Task 4\ParserFiles\bin\Debug\DA.dll
+D:\VS\epam-training\Task 4\ParserFiles\bin\Debug\EntityFramework.dll
+D:\VS\epam-training\Task 4\ParserFiles\bin\Debug\BL.pdb
+D:\VS\epam-training\Task 4\ParserFiles\bin\Debug\DA.pdb
+D:\VS\epam-training\Task 4\ParserFiles\bin\Debug\EntityFramework.xml
+D:\VS\epam-training\Task 4\ParserFiles\bin\Debug\EntityFramework.SqlServer.dll
+D:\VS\epam-training\Task 4\ParserFiles\bin\Debug\EntityFramework.SqlServer.xml

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,10 @@ namespace ParserFiles
     {
         static void Main(string[] args)
         {
+            ClientHelper client = new ClientHelper();
+            //client.AddClient("Проба");
+            //client.RenameClient("Проба", "Про баб");
+            //client.DeleteClient("Про баб");
         }
     }
 }

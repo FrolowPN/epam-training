@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="ClientHelper.cs" />
     <Compile Include="ManagerHelper.cs" />
+    <Compile Include="OrderHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
