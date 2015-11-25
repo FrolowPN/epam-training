@@ -16,6 +16,12 @@ namespace BL
             ctx.Clients.Add(client);
             ctx.SaveChanges();
         }
+        public bool ExistClient(string clientName)
+        {
+            BaseContext ctx = new BaseContext();
+            int notExistClient =0;
+            return ctx.Clients.Where(x => x.Name == clientName).Count() != notExistClient;    
+        }
 
     }
 }
