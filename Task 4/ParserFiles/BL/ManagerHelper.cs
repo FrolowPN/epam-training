@@ -11,10 +11,14 @@ namespace BL
     {
         public void AddManager(string managerName)
         {
-            BaseContext ctx = new BaseContext();
+            if (!ExistManager(managerName))
+            {
+             BaseContext ctx = new BaseContext();
            Manager manager = new Manager() { Name = managerName };
             ctx.Managers.Add(manager);
-            ctx.SaveChanges();
+            ctx.SaveChanges();   
+            }
+            
         }
         public bool ExistManager(string managerName)
         {
@@ -27,7 +31,7 @@ namespace BL
             BaseContext ctx = new BaseContext();
             if (ExistManager(managerName))
             {
-                ctx.Managers.Remove(GetManager(managerName));
+                ctx.Managers.Remove(ctx.Managers.Where(x => x.Name == managerName).FirstOrDefault());
                 ctx.SaveChanges();
             }
         }
