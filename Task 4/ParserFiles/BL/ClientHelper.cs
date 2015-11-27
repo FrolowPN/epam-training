@@ -11,10 +11,14 @@ namespace BL
     {
         public void AddClient(string clientName)
         {
-            BaseContext ctx = new BaseContext();
-            Client client = new Client() { Name = clientName};
-            ctx.Clients.Add(client);
-            ctx.SaveChanges();
+            if (!ExistClient(clientName))
+            {
+                BaseContext ctx = new BaseContext();
+                Client client = new Client() { Name = clientName };
+                ctx.Clients.Add(client);
+                ctx.SaveChanges();
+            }
+
         }
         public bool ExistClient(string clientName)
         {
@@ -27,7 +31,7 @@ namespace BL
             BaseContext ctx = new BaseContext();
             if (ExistClient(clientName))
             {
-                 ctx.Clients.Remove(ctx.Clients.Where(x => x.Name == clientName).FirstOrDefault());
+                ctx.Clients.Remove(ctx.Clients.Where(x => x.Name == clientName).FirstOrDefault());
                 ctx.SaveChanges();
             }
         }
@@ -50,7 +54,7 @@ namespace BL
             BaseContext ctx = new BaseContext();
             if (ExistClient(oldNameClient))
             {
-              ctx.Clients.Where(x => x.Name == oldNameClient).FirstOrDefault().Name = newNameClient;  
+                ctx.Clients.Where(x => x.Name == oldNameClient).FirstOrDefault().Name = newNameClient;
             }
             ctx.SaveChanges();
         }
