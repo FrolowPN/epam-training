@@ -49,7 +49,7 @@ namespace BL
             BaseContext ctx = new BaseContext();
             if (ExistManager(oldNameManager))
             {
-                GetManager(oldNameManager).Name = newNameManager;
+                ctx.Managers.Where(x => x.Name == oldNameManager).FirstOrDefault().Name = newNameManager;
             }
             ctx.SaveChanges();
         }

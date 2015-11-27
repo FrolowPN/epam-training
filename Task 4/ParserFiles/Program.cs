@@ -11,10 +11,9 @@ namespace ParserFiles
     {
         static void Main(string[] args)
         {
-            ClientHelper client = new ClientHelper();
-            //client.AddClient("Проба");
-            //client.RenameClient("Проба", "Про баб");
-            //client.DeleteClient("Про баб");
+            ManagerHelper manager = new ManagerHelper();
+            manager.AddManager("manager");
+            manager.RenameManager("manager","manamanager");
         }
     }
 }
