@@ -20,6 +20,19 @@ namespace BL
             }
 
         }
+        public int GetIdClient(string nameClient)
+        {
+            BaseContext ctx = new BaseContext();
+            if (ExistClient(nameClient))
+            {
+                return ctx.Clients.Where(x => x.Name == nameClient).FirstOrDefault().Id;
+            }
+            else
+            {
+                AddClient(nameClient);
+                return ctx.Clients.Where(x => x.Name == nameClient).FirstOrDefault().Id;
+            }
+        }
         public bool ExistClient(string clientName)
         {
             BaseContext ctx = new BaseContext();

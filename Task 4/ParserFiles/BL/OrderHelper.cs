@@ -12,6 +12,9 @@ namespace BL
         public void AddOrder(OrderWievModel orderWM) 
         {
             BaseContext ctx = new BaseContext();
+
+          //  Order order = new Order() { DateOrder = orderWM.DateOrder, IdClient = ctx.Clients};
+            //ctx.Orders.Add()
         }
     }
 }
