@@ -36,7 +36,8 @@ namespace ParserFiles
             new OrderWievModel() { DateOrder = DateTime.Now, NameClient = "Four", Product = "Monitor", CostProduct = 0.15 },
             new OrderWievModel() { DateOrder = DateTime.Now, NameClient = "Five", Product = "Chair", CostProduct = 152456 }
             };
-            inputFile.AddInputFile(DateTime.Now, "Tester", listOrders);
+            InputFileWievModel inputWM = new InputFileWievModel(){DateFile = DateTime.Now, NameManager= "Tester"};
+            inputFile.AddInputFile(inputWM, listOrders);
         }
     }
 }

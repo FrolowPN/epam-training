@@ -9,15 +9,15 @@ namespace BL
 {
     public class InputFileManager
     {
-        public void AddInputFile(DateTime dateFile, string nameManager, IList<OrderWievModel> ordersWM)
+        public void AddInputFile(InputFileWievModel inputWM, IList<OrderWievModel> ordersWM)
         {
             var ctx = new BaseContext();
             ManagerHelper managerHelper = new ManagerHelper();
             OrderHelper orderHelper = new OrderHelper();
             InputFile inputFile = new InputFile()
                                                 {
-                                                    DateFile = dateFile,
-                                                    IdManager = managerHelper.GetIdManager(nameManager),
+                                                    DateFile = inputWM.DateFile,
+                                                    IdManager = managerHelper.GetIdManager(inputWM.NameManager),
                                                     Orders = orderHelper.ConvertWievToOrder(ordersWM)
                                                 };
             ctx.InputFiles.Add(inputFile);
