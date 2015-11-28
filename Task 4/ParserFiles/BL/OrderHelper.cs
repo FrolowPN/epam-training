@@ -23,5 +23,19 @@ namespace BL
             ctx.Orders.Add(order);
             ctx.SaveChanges();
         }
+
+        public IList<Order> ConvertWievToOrder(IList<OrderWievModel> listOrderWM)
+        {
+            BaseContext ctx = new BaseContext();
+            ClientHelper clientHelper = new ClientHelper();
+            List<Order> result = listOrderWM.Select(x => new Order()
+                                                            {
+                                                                DateOrder = x.DateOrder,
+                                                                IdClient = clientHelper.GetIdClient(x.NameClient),
+                                                                Product = x.Product,
+                                                                Cost = x.CostProduct
+                                                            }).ToList();
+            return result;
+        }
     }
 }
