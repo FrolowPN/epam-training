@@ -22,7 +22,6 @@ namespace BL
                                                 };
             ctx.InputFiles.Add(inputFile);
             ctx.SaveChanges();
-
         }
     }
 }
