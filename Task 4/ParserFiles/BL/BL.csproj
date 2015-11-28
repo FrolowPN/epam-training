@@ -46,12 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClientHelper.cs" />
-    <Compile Include="InputFileManager.cs" />
-    <Compile Include="InputFileWievModel.cs" />
-    <Compile Include="ManagerHelper.cs" />
-    <Compile Include="OrderHelper.cs" />
-    <Compile Include="OrderWievModel.cs" />
+    <Compile Include="Helpers\ClientHelper.cs" />
+    <Compile Include="Helpers\InputFileManager.cs" />
+    <Compile Include="Parser.cs" />
+    <Compile Include="WievModel\InputFileWievModel.cs" />
+    <Compile Include="Helpers\ManagerHelper.cs" />
+    <Compile Include="Helpers\OrderHelper.cs" />
+    <Compile Include="WievModel\OrderWievModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -46,16 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseContext.cs" />
-    <Compile Include="InputFile.cs" />
-    <Compile Include="Client.cs" />
-    <Compile Include="Manager.cs" />
+    <Compile Include="Context\BaseContext.cs" />
+    <Compile Include="Table\InputFile.cs" />
+    <Compile Include="Table\Client.cs" />
+    <Compile Include="Table\Manager.cs" />
     <Compile Include="Migrations\201511191637505_InitialCreate.cs" />
     <Compile Include="Migrations\201511191637505_InitialCreate.Designer.cs">
       <DependentUpon>201511191637505_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Order.cs" />
+    <Compile Include="Table\Order.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
