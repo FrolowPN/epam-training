@@ -9,12 +9,19 @@ namespace BL
 {
     public class OrderHelper
     {
-        public void AddOrder(OrderWievModel orderWM) 
+        public void AddOrder(OrderWievModel orderWM)
         {
             BaseContext ctx = new BaseContext();
-
-          //  Order order = new Order() { DateOrder = orderWM.DateOrder, IdClient = ctx.Clients};
-            //ctx.Orders.Add()
+            ClientHelper clientHelper = new ClientHelper();
+            Order order = new Order()
+                                    {
+                                        DateOrder = orderWM.DateOrder,
+                                        IdClient = clientHelper.GetIdClient(orderWM.NameClient),
+                                        Product = orderWM.Product,
+                                        Cost = orderWM.CostProduct
+                                    };
+            ctx.Orders.Add(order);
+            ctx.SaveChanges();
         }
     }
 }

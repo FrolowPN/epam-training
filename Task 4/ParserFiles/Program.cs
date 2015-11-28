@@ -19,6 +19,12 @@ namespace ParserFiles
             //ClientHelper client = new ClientHelper();
             //client.AddClient("client");
             //client.DeleteClient("client");
+            OrderHelper orderHelper = new OrderHelper();
+            OrderWievModel wiev = new OrderWievModel() { DateOrder = DateTime.Now, 
+                                                         NameClient = "First", 
+                                                         Product = "PC", 
+                                                         CostProduct = 123.5 };
+            orderHelper.AddOrder(wiev);
         }
     }
 }
