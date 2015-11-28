@@ -57,5 +57,18 @@ namespace BL
             }
             ctx.SaveChanges();
         }
+        public int GetIdManager(string nameManager) 
+        {
+            BaseContext ctx = new BaseContext(); 
+            if (ExistManager(nameManager))
+            {
+                return ctx.Managers.Where(x => x.Name == nameManager).FirstOrDefault().Id;
+            }
+            else
+            {
+                AddManager(nameManager);
+                return ctx.Managers.Where(x => x.Name == nameManager).FirstOrDefault().Id;
+            }
+        }
     }
 }
