@@ -1,0 +1,12 @@
+D:\VS\epam-training\Task 4\ParserService\bin\Debug\ParserService.exe.config
+D:\VS\epam-training\Task 4\ParserService\bin\Debug\ParserService.exe
+D:\VS\epam-training\Task 4\ParserService\bin\Debug\ParserService.pdb
+D:\VS\epam-training\Task 4\ParserService\bin\Debug\BL.dll
+D:\VS\epam-training\Task 4\ParserService\bin\Debug\DA.dll
+D:\VS\epam-training\Task 4\ParserService\bin\Debug\EntityFramework.dll
+D:\VS\epam-training\Task 4\ParserService\bin\Debug\BL.pdb
+D:\VS\epam-training\Task 4\ParserService\bin\Debug\DA.pdb
+D:\VS\epam-training\Task 4\ParserService\bin\Debug\EntityFramework.xml
+D:\VS\epam-training\Task 4\ParserService\obj\Debug\ParserService.csprojResolveAssemblyReference.cache
+D:\VS\epam-training\Task 4\ParserService\obj\Debug\ParserService.exe
+D:\VS\epam-training\Task 4\ParserService\obj\Debug\ParserService.pdb
