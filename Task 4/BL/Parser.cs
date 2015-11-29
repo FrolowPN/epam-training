@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
 
 namespace BL
 {
@@ -35,10 +36,11 @@ namespace BL
                     stringFile.Add(tempString); 
                 }
             }
+            char separator = Convert.ToChar(ConfigurationManager.AppSettings["Separator"]);
             foreach (var item in stringFile)
             {
-                string[] partsString = item.Split(',');
-                int datePart = 0;
+                string[] partsString = item.Split(separator);
+                int datePart = 0;                                 //входящая строка вида дата,клиент,товар,сумма разбивается на 4 части
                 int clientPart = 0;
                 int productPart = 0;
                 int costPart = 0;
@@ -53,17 +55,17 @@ namespace BL
 
             }
             return result;
-
         }
 
          DateTime ConvertToDate(string date)                        //дата принимается строкой вида ДДММГГГГ
         {
             string result = "";
+            string separatorDate = ConfigurationManager.AppSettings["SeparatorDate"];
             for (int i = 0; i < date.Length; i++)
             {
                 if (i == 3 || i == 6)                              //преобразуем входящую строку в ДД-ММ-ГГГГ
                 {
-                    result += "-" + date[i];
+                    result += separatorDate + date[i];
                 }
                 else 
                 {
