@@ -11,17 +11,19 @@ namespace BL
     {
         public void AddInputFile(InputFileWievModel inputWM, IList<OrderWievModel> ordersWM)
         {
-            var ctx = new BaseContext();
-            ManagerHelper managerHelper = new ManagerHelper();
-            OrderHelper orderHelper = new OrderHelper();
-            InputFile inputFile = new InputFile()
-                                                {
-                                                    DateFile = inputWM.DateFile,
-                                                    IdManager = managerHelper.GetIdManager(inputWM.NameManager),
-                                                    Orders = orderHelper.ConvertWievToOrder(ordersWM)
-                                                };
-            ctx.InputFiles.Add(inputFile);
-            ctx.SaveChanges();
+            using (var ctx = new BaseContext())
+            {
+                ManagerHelper managerHelper = new ManagerHelper();
+                OrderHelper orderHelper = new OrderHelper();
+                InputFile inputFile = new InputFile()
+                                                    {
+                                                        DateFile = inputWM.DateFile,
+                                                        IdManager = managerHelper.GetIdManager(inputWM.NameManager),
+                                                        Orders = orderHelper.ConvertWievToOrder(ordersWM)
+                                                    };
+                ctx.InputFiles.Add(inputFile);
+                ctx.SaveChanges();
+            }
         }
     }
 }

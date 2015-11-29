@@ -13,61 +13,76 @@ namespace BL
         {
             if (!ExistManager(managerName))
             {
-             BaseContext ctx = new BaseContext();
-           Manager manager = new Manager() { Name = managerName };
-            ctx.Managers.Add(manager);
-            ctx.SaveChanges();   
+                using (BaseContext ctx = new BaseContext())
+                {
+                    Manager manager = new Manager() { Name = managerName };
+                    ctx.Managers.Add(manager);
+                    ctx.SaveChanges();
+                }
             }
-            
         }
+
         public bool ExistManager(string managerName)
         {
-            BaseContext ctx = new BaseContext();
-            int notExistManager = 0;
-            return ctx.Managers.Where(x => x.Name == managerName).Count() != notExistManager;
+            using (BaseContext ctx = new BaseContext())
+            {
+                int notExistManager = 0;
+                return ctx.Managers.Where(x => x.Name == managerName).Count() != notExistManager;
+            }
         }
+
         public void DeleteManager(string managerName)
         {
-            BaseContext ctx = new BaseContext();
-            if (ExistManager(managerName))
+            using (BaseContext ctx = new BaseContext())
             {
-                ctx.Managers.Remove(ctx.Managers.Where(x => x.Name == managerName).FirstOrDefault());
-                ctx.SaveChanges();
+                if (ExistManager(managerName))
+                {
+                    ctx.Managers.Remove(ctx.Managers.Where(x => x.Name == managerName).FirstOrDefault());
+                    ctx.SaveChanges();
+                }
             }
         }
         public Manager GetManager(string nameManager)
         {
-            BaseContext ctx = new BaseContext();
-            if (ExistManager(nameManager))
+            using (BaseContext ctx = new BaseContext())
             {
-                return ctx.Managers.Where(x => x.Name == nameManager).FirstOrDefault();
-            }
-            else
-            {
-               Manager manager = new Manager() { Id = 00, Name = "Клиент не найден" };
-                return manager;
+                if (ExistManager(nameManager))
+                {
+                    return ctx.Managers.Where(x => x.Name == nameManager).FirstOrDefault();
+                }
+                else
+                {
+                    Manager manager = new Manager() { Id = 00, Name = "Клиент не найден" };
+                    return manager;
+                }
             }
         }
+
         public void RenameManager(string oldNameManager, string newNameManager)
         {
-            BaseContext ctx = new BaseContext();
-            if (ExistManager(oldNameManager))
+            using (BaseContext ctx = new BaseContext())
             {
-                ctx.Managers.Where(x => x.Name == oldNameManager).FirstOrDefault().Name = newNameManager;
+                if (ExistManager(oldNameManager))
+                {
+                    ctx.Managers.Where(x => x.Name == oldNameManager).FirstOrDefault().Name = newNameManager;
+                }
+                ctx.SaveChanges();
             }
-            ctx.SaveChanges();
         }
-        public int GetIdManager(string nameManager) 
+
+        public int GetIdManager(string nameManager)
         {
-            BaseContext ctx = new BaseContext(); 
-            if (ExistManager(nameManager))
+            using (BaseContext ctx = new BaseContext())
             {
-                return ctx.Managers.Where(x => x.Name == nameManager).FirstOrDefault().Id;
-            }
-            else
-            {
-                AddManager(nameManager);
-                return ctx.Managers.Where(x => x.Name == nameManager).FirstOrDefault().Id;
+                if (ExistManager(nameManager))
+                {
+                    return ctx.Managers.Where(x => x.Name == nameManager).FirstOrDefault().Id;
+                }
+                else
+                {
+                    AddManager(nameManager);
+                    return ctx.Managers.Where(x => x.Name == nameManager).FirstOrDefault().Id;
+                }
             }
         }
     }
