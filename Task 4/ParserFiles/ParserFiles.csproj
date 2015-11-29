@@ -57,7 +57,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="BL\BL.csproj">
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BL\BL.csproj">
       <Project>{d11e5f90-320c-4251-a49c-11af4ca32be9}</Project>
       <Name>BL</Name>
     </ProjectReference>
