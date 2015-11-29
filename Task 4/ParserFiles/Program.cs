@@ -40,8 +40,9 @@ namespace ParserFiles
             //InputFileWievModel inputWM = new InputFileWievModel(){DateFile = DateTime.Now, NameManager= "Tester"};
             //inputFile.AddInputFile(inputWM, listOrders);
             FileManager fileManager = new FileManager();
-            List<string> result = new List<string>();
-            fileManager.FindAllFolders(ConfigurationManager.AppSettings["InputFolder"], result);
+            List<string> resultFolder = new List<string>();
+            fileManager.FindAllFolders(ConfigurationManager.AppSettings["InputFolder"], resultFolder);
+            var result = fileManager.FindAllFiles(resultFolder);
             foreach (var item in result)
             {
                 Console.WriteLine(item);
