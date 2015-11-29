@@ -13,7 +13,8 @@ namespace BL
     {
         public InputFileWievModel ParseNameFile(string nameFile)
         {
-            string[] partsNameFile = nameFile.Split('_');
+            char separatorNameFile = Convert.ToChar(ConfigurationManager.AppSettings["SeparatorNameFile"]);
+            string[] partsNameFile = nameFile.Split(separatorNameFile);
             int nameManager = 0;                                        // имя менеджера первая часть имени файла
             int dateFile = 1;                                          //дата файла вторая часть имени файла
             InputFileWievModel result = new InputFileWievModel()
@@ -33,7 +34,8 @@ namespace BL
                 string tempString = file.ReadLine();
                 while (tempString != null)
                 {
-                    stringFile.Add(tempString); 
+                    stringFile.Add(tempString);
+                    tempString = file.ReadLine();
                 }
             }
             char separator = Convert.ToChar(ConfigurationManager.AppSettings["Separator"]);
@@ -41,9 +43,9 @@ namespace BL
             {
                 string[] partsString = item.Split(separator);
                 int datePart = 0;                                 //входящая строка вида дата,клиент,товар,сумма разбивается на 4 части
-                int clientPart = 0;
-                int productPart = 0;
-                int costPart = 0;
+                int clientPart = 1;
+                int productPart = 2;
+                int costPart = 3;
                 OrderWievModel orderWM = new OrderWievModel()
                                                             {
                                                                 DateOrder = ConvertToDate(partsString[datePart]),
@@ -63,7 +65,7 @@ namespace BL
             string separatorDate = ConfigurationManager.AppSettings["SeparatorDate"];
             for (int i = 0; i < date.Length; i++)
             {
-                if (i == 3 || i == 6)                              //преобразуем входящую строку в ДД-ММ-ГГГГ
+                if (i == 2 || i == 4)                              //преобразуем входящую строку в ДД-ММ-ГГГГ
                 {
                     result += separatorDate + date[i];
                 }

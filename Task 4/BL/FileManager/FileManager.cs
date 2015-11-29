@@ -42,6 +42,10 @@ namespace BL
             }
             return listPathFile;
         }
+        public string GetNameFile(string pathFile)
+        {
+            return Path.GetFileNameWithoutExtension(pathFile);
+        }
 
     }
 }
