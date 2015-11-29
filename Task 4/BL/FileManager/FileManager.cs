@@ -50,7 +50,7 @@ namespace BL
         public void MoveFile(string pathFile, string pathNewFolder)
         {
             string formatFile = ConfigurationManager.AppSettings["FormatFile"];
-            if (File.Exists(pathFile))
+            if (File.Exists(pathNewFolder + GetNameFile(pathFile) + "." + formatFile)) //
             {
                 File.Move(pathFile, pathNewFolder + "new_" + GetNameFile(pathFile) + "."+formatFile);    
             }
