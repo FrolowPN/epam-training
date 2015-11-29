@@ -47,5 +47,17 @@ namespace BL
             return Path.GetFileNameWithoutExtension(pathFile);
         }
 
+        public void MoveFile(string pathFile, string pathNewFolder)
+        {
+            string formatFile = ConfigurationManager.AppSettings["FormatFile"];
+            if (File.Exists(pathFile))
+            {
+                File.Move(pathFile, pathNewFolder + "new_" + GetNameFile(pathFile) + "."+formatFile);    
+            }
+            else
+            {
+                File.Move(pathFile, pathNewFolder + GetNameFile(pathFile) + "." + formatFile);
+            }
+        }
     }
 }
