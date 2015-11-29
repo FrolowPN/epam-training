@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileManager.cs" />
     <Compile Include="Helpers\ClientHelper.cs" />
     <Compile Include="Helpers\InputFileManager.cs" />
     <Compile Include="Parser.cs" />
